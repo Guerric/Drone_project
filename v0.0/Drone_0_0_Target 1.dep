@@ -1,5 +1,5 @@
 Dependencies for Project 'Drone_0_0', Target 'Target 1': (DO NOT MODIFY !)
-F (.\drivers\adc\adc.c)(0x544A29FB)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/adc.o)
+F (.\drivers\adc\adc.c)(0x544A29FB)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/adc.o)
 I (drivers\adc\adc.h)(0x544A283B)
 I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
@@ -8,7 +8,7 @@ I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\s
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
 I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
-F (.\drivers\clock\clock.c)(0x50503E5E)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/clock.o)
+F (.\drivers\clock\clock.c)(0x50503E5E)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/clock.o)
 I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
 I (c:\program files (x86)\codesourcery\sourcery g++ lite\lib\gcc\arm-none-eabi\4.5.2\include\stdint.h)(0x4DAEDA22)
@@ -18,7 +18,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
 I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
 I (drivers\clock\clock_conf.h)(0x50503DAD)
 I (drivers\clock\clock.h)(0x50503E14)
-F (.\drivers\gpio\gpio.c)(0x544D1542)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/gpio.o)
+F (.\drivers\gpio\gpio.c)(0x544D1542)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/gpio.o)
 I (drivers\gpio\gpio.h)(0x544D1407)
 I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
@@ -27,7 +27,7 @@ I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\s
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
 I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
-F (.\drivers\pwm\pwm.c)(0x544D1ED0)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/pwm.o)
+F (.\drivers\pwm\pwm.c)(0x546014C3)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/pwm.o)
 I (drivers\pwm\pwm.h)(0x544D1CD4)
 I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
@@ -36,9 +36,9 @@ I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\s
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
 I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
-I (drivers\timer\timer1234.h)(0x544D2033)
-F (.\drivers\timer\timer1234.c)(0x544D2045)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/timer1234.o)
-I (drivers\timer\timer1234.h)(0x544D2033)
+I (drivers\timer\timer1234.h)(0x5460DF32)
+F (.\drivers\timer\timer1234.c)(0x5460DF32)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/timer1234.o)
+I (drivers\timer\timer1234.h)(0x5460DF32)
 I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
 I (c:\program files (x86)\codesourcery\sourcery g++ lite\lib\gcc\arm-none-eabi\4.5.2\include\stdint.h)(0x4DAEDA22)
@@ -46,7 +46,40 @@ I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\s
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
 I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
-F (.\sources\main.c)(0x545418B9)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/main.o)
+F (.\drivers\i2c\i2c.c)(0x54610647)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/i2c.o)
+I (drivers\i2c\i2c.h)(0x546104C3)
+I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
+I (c:\program files (x86)\codesourcery\sourcery g++ lite\lib\gcc\arm-none-eabi\4.5.2\include\stdint.h)(0x4DAEDA22)
+I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\stdint.h)(0x4DAF3BCE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
+I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
+I (drivers\gpio\gpio.h)(0x544D1407)
+F (.\drivers\motor.c)(0x546014C3)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/motor.o)
+I (drivers\motor.h)(0x54601424)
+I (drivers\gpio\gpio.h)(0x544D1407)
+I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
+I (c:\program files (x86)\codesourcery\sourcery g++ lite\lib\gcc\arm-none-eabi\4.5.2\include\stdint.h)(0x4DAEDA22)
+I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\stdint.h)(0x4DAF3BCE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
+I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
+I (drivers\timer\timer1234.h)(0x5460DF32)
+I (drivers\pwm\pwm.h)(0x544D1CD4)
+F (.\drivers\sensors.c)(0x54610555)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/sensors.o)
+I (drivers\sensors.h)(0x5460E912)
+I (drivers\i2c\i2c.h)(0x546104C3)
+I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
+I (c:\program files (x86)\codesourcery\sourcery g++ lite\lib\gcc\arm-none-eabi\4.5.2\include\stdint.h)(0x4DAEDA22)
+I (c:\program files (x86)\codesourcery\sourcery g++ lite\arm-none-eabi\include\stdint.h)(0x4DAF3BCE)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmInstr.h)(0x5302F730)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
+I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
+I (drivers\gpio\gpio.h)(0x544D1407)
+F (.\sources\main.c)(0x5460D0B2)(-c -mcpu=cortex-m3 -mthumb -gdwarf-2 -MD -Wall -O -mapcs-frame -mthumb-interwork -I../stm32lib/stm32f10x/boot -I./drivers/adc -I./drivers/clock -I./drivers/gpio -I./drivers/pwm -I./drivers/timer -I./sources -I./drivers/i2c -I./drivers -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include -DSTM32F10X_MD -DSTM32F10X_MD-o ./release/main.o)
 I (..\stm32lib\stm32f10x\boot\stm32f10x.h)(0x4D789114)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cm3.h)(0x53846D16)
 I (c:\program files (x86)\codesourcery\sourcery g++ lite\lib\gcc\arm-none-eabi\4.5.2\include\stdint.h)(0x4DAEDA22)
@@ -56,7 +89,10 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.1\CMSIS\Include\core_cmFunc.h)(0x5302F730)
 I (..\stm32lib\stm32f10x\boot\system_stm32f10x.h)(0x4D78910A)
 I (drivers\clock\clock.h)(0x50503E14)
 I (drivers\gpio\gpio.h)(0x544D1407)
-I (drivers\timer\timer1234.h)(0x544D2033)
+I (drivers\timer\timer1234.h)(0x5460DF32)
 I (drivers\adc\adc.h)(0x544A283B)
 I (drivers\pwm\pwm.h)(0x544D1CD4)
+I (drivers\i2c\i2c.h)(0x546104C3)
+I (drivers\motor.h)(0x54601424)
+I (drivers\sensors.h)(0x5460E912)
 F (..\stm32lib\stm32f10x\boot\stm32f103\startup-gcc.S)(0x5441060D)(-mcpu=cortex-m3 -mthumb --gdwarf-2 -mthumb-interwork -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include -IC:/Keil_v5/ARM/PACK/Keil/STM32F1xx_DFP/1.0.5/Device/Include--MD ./release/startup-gcc.d -o ./release/startup-gcc.o)

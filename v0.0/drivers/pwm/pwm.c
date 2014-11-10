@@ -34,11 +34,11 @@ void PWM_Init (TIM_TypeDef * Timer, u8 Voie, float Frequence_PWM_Khz){
 	
 	// choix de la voie du timer
 	if (Voie <=2){
-		Timer->CCMR1 &= ~(0xFF<<(Voie-1));
-		Timer->CCMR1 |= 0b01101000<<(Voie-1);				// not dislable 0 ,mode 1: 110, preload enable & fast dislable 10 , output enable 00
+		Timer->CCMR1 &= ~(0xFF<<((Voie-1)*8));
+		Timer->CCMR1 |= 0b01101000<<((Voie-1)*8);				// not dislable 0 ,mode 1: 110, preload enable & fast dislable 10 , output enable 00
 	}else if (Voie<=4){
-		Timer->CCMR2 &= ~(0xFF<<(Voie-3));
-		Timer->CCMR2 |= 0b01101000<<(Voie-3);				// not dislable 0 ,mode 1: 110, preload enable & fast dislable 10 , output enable 00
+		Timer->CCMR2 &= ~(0xFF<<((Voie-3)*8));
+		Timer->CCMR2 |= 0b01101000<<((Voie-3)*8);				// not dislable 0 ,mode 1: 110, preload enable & fast dislable 10 , output enable 00
 	}
 	
 	//choix de la polarité

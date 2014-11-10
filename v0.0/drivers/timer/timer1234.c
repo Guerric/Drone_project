@@ -36,12 +36,6 @@ float Timer_1234_Init(TIM_TypeDef *Timer, float Duree_us){
 
 //Fonctions d'interruption et handlers
 
-void (*Function_TIM2) (void);
-
-void (*Function_TIM3) (void);
-
-void (*Function_TIM4) (void);
-
 
 void TIM2_IRQHandler(void){
 	Function_TIM2();
@@ -72,18 +66,15 @@ void Timer_Active_IT (TIM_TypeDef *Timer, u8 Priority, void (*IT_function) (void
 	//activation de l'interruption au niveau du NVIC et choix de la priorité
 	if (Timer==TIM2){
 			NVIC->ISER[0] |= 0b1<<28;
-			NVIC->IP[28] &= ~0xF0;
-			NVIC->IP[28] |= Priority<<4;
+			NVIC->IP[28] = Priority<<4;
 			Function_TIM2=IT_function;
 	}else if (Timer==TIM3){		
 			NVIC->ISER[0] |= 0b1<<29;
-			NVIC->IP[29] &= ~0xF0;
-			NVIC->IP[29] |= Priority<<4;
+			NVIC->IP[29] = Priority<<4;
 			Function_TIM4=IT_function;
 	}else if (Timer==TIM4){		
 			NVIC->ISER[0] |= 0b1<<30;
-			NVIC->IP[30] &= ~0xF0;
-			NVIC->IP[30] |= Priority<<4;
+			NVIC->IP[30] = Priority<<4;
 			Function_TIM3=IT_function;
 	}
 }

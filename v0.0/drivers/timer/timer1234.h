@@ -26,4 +26,10 @@ float Timer_1234_Init(TIM_TypeDef *Timer, float Duree_us);
 void Timer_Active_IT (TIM_TypeDef *Timer, u8 Priority, void (*IT_function) (void));
 
 
+void (*Function_TIM2) (void);
+
+void (*Function_TIM3) (void);
+
+void (*Function_TIM4) (void);
+
 #endif

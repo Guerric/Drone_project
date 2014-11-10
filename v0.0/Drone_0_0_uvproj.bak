@@ -14,8 +14,6 @@
         <TargetCommonOption>
           <Device>STM32F103RB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.1.0.5</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x20000) IRAM(0x20000000,0x5000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -280,7 +278,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32lib\stm32f10x\boot;.\pilotes\timer;.\pilotes\pwm;.\pilotes\gpio;.\pilotes\clock;.\pilotes\adc;.\sources</IncludePath>
+              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -316,27 +314,37 @@
             <File>
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\pilotes\adc\adc.c</FilePath>
+              <FilePath>.\drivers\adc\adc.c</FilePath>
             </File>
             <File>
               <FileName>clock.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\pilotes\clock\clock.c</FilePath>
+              <FilePath>.\drivers\clock\clock.c</FilePath>
             </File>
             <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\pilotes\gpio\gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer1234.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\pilotes\timer\timer1234.c</FilePath>
+              <FilePath>.\drivers\gpio\gpio.c</FilePath>
             </File>
             <File>
               <FileName>pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\pilotes\pwm\pwm.c</FilePath>
+              <FilePath>.\drivers\pwm\pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer1234.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\timer\timer1234.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\i2c\i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\motor.c</FilePath>
             </File>
           </Files>
         </Group>
