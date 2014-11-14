@@ -1,0 +1,111 @@
+\hypertarget{clock__conf_8h}{\section{drivers/clock/clock\+\_\+conf.h File Reference}
+\label{clock__conf_8h}\index{drivers/clock/clock\+\_\+conf.\+h@{drivers/clock/clock\+\_\+conf.\+h}}
+}
+
+
+Fichier de configuration des horloges.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{clock__conf_8h_ac442e2093de03eb9371c50772761a5dd}{\#define {\bfseries R\+C\+C\+\_\+\+P\+L\+L\+S\+R\+C}~(1$<$$<$16)}\label{clock__conf_8h_ac442e2093de03eb9371c50772761a5dd}
+
+\item 
+\hypertarget{clock__conf_8h_aaadc4b55ed38c824733835309410931e}{\#define {\bfseries R\+C\+C\+\_\+\+P\+L\+L\+S\+R\+C\+\_\+\+I\+S\+\_\+\+H\+S\+I}~(0$<$$<$16)}\label{clock__conf_8h_aaadc4b55ed38c824733835309410931e}
+
+\item 
+\hypertarget{clock__conf_8h_abd79334b2e60a52b188dfe1e1ceab71b}{\#define {\bfseries R\+C\+C\+\_\+\+P\+L\+L\+S\+R\+C\+\_\+\+I\+S\+\_\+\+H\+S\+E}~(1$<$$<$16)}\label{clock__conf_8h_abd79334b2e60a52b188dfe1e1ceab71b}
+
+\item 
+\hypertarget{clock__conf_8h_ae2c0092bdeafff11fb20a2db4d9b887f}{\#define {\bfseries R\+C\+C\+\_\+\+P\+L\+L\+S\+R\+C\+\_\+\+I\+S\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+1}~(1$<$$<$16)}\label{clock__conf_8h_ae2c0092bdeafff11fb20a2db4d9b887f}
+
+\item 
+\hypertarget{clock__conf_8h_a3d3432ae6bf15548ff00c8fb52bcb69f}{\#define {\bfseries R\+C\+C\+\_\+\+P\+L\+L\+M\+U\+L\+\_\+\+S\+H\+I\+F\+T}~(18)}\label{clock__conf_8h_a3d3432ae6bf15548ff00c8fb52bcb69f}
+
+\item 
+\hypertarget{clock__conf_8h_abc14337b82c71859ac9391cf90279442}{\#define {\bfseries R\+C\+C\+\_\+\+P\+L\+L\+M\+U\+L\+\_\+\+V\+A\+L}(mult)~(((mult-\/2) \& 0x\+F )$<$$<$\+R\+C\+C\+\_\+\+P\+L\+L\+M\+U\+L\+\_\+\+S\+H\+I\+F\+T)}\label{clock__conf_8h_abc14337b82c71859ac9391cf90279442}
+
+\item 
+\hypertarget{clock__conf_8h_a94e6e48b4f267e273ff435e8a92657db}{\#define {\bfseries R\+C\+C\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+S\+H\+I\+F\+T}~(14)}\label{clock__conf_8h_a94e6e48b4f267e273ff435e8a92657db}
+
+\item 
+\hypertarget{clock__conf_8h_aad3546469a78334f406dfcf817ea0d01}{\#define {\bfseries R\+C\+C\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+V\+A\+L}(pres)~((((pres/2)-\/1) \& 0x3 )$<$$<$\+R\+C\+C\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+S\+H\+I\+F\+T)}\label{clock__conf_8h_aad3546469a78334f406dfcf817ea0d01}
+
+\item 
+\hypertarget{clock__conf_8h_ae43e2564fc313b4e50dc583d8ca7e49e}{\#define {\bfseries R\+C\+C\+\_\+\+P\+P\+R\+E1\+\_\+\+S\+H\+I\+F\+T}~(8)}\label{clock__conf_8h_ae43e2564fc313b4e50dc583d8ca7e49e}
+
+\item 
+\hypertarget{clock__conf_8h_afe2fb405e50431b4007a15b4d9182a86}{\#define {\bfseries R\+C\+C\+\_\+\+P\+P\+R\+E1\+\_\+\+V\+A\+L}(pre)~((pre==1) ? 0 \+: ((pre/2)-\/(pre/8)-\/2$\ast$(pre/16)+3)$<$$<$R\+C\+C\+\_\+\+P\+P\+R\+E1\+\_\+\+S\+H\+I\+F\+T)}\label{clock__conf_8h_afe2fb405e50431b4007a15b4d9182a86}
+
+\item 
+\hypertarget{clock__conf_8h_a5f0ead08de6fc6273f5a8f647031490a}{\#define {\bfseries R\+C\+C\+\_\+\+P\+P\+R\+E2\+\_\+\+S\+H\+I\+F\+T}~(11)}\label{clock__conf_8h_a5f0ead08de6fc6273f5a8f647031490a}
+
+\item 
+\hypertarget{clock__conf_8h_a23e8baa09f802acf78f0a7b4e884b830}{\#define {\bfseries R\+C\+C\+\_\+\+P\+P\+R\+E2\+\_\+\+V\+A\+L}(pre)~((pre==1) ? 0 \+: ((pre/2)-\/(pre/8)-\/2$\ast$(pre/16)+3)$<$$<$R\+C\+C\+\_\+\+P\+P\+R\+E2\+\_\+\+S\+H\+I\+F\+T)}\label{clock__conf_8h_a23e8baa09f802acf78f0a7b4e884b830}
+
+\item 
+\hypertarget{clock__conf_8h_ab808ec01db61c51983d7414daf8cda43}{\#define {\bfseries R\+C\+C\+\_\+\+H\+P\+R\+E\+\_\+\+S\+H\+I\+F\+T}~(4)}\label{clock__conf_8h_ab808ec01db61c51983d7414daf8cda43}
+
+\item 
+\hypertarget{clock__conf_8h_a9774b35a3ab8a03b73998c64363078ff}{\#define {\bfseries R\+C\+C\+\_\+\+H\+P\+R\+E\+\_\+\+V\+A\+L}(pre)~( (pre==1) ? 0 \+: (7+(pre$>$256)+(pre$>$128)+(pre$>$64)+(pre$>$16)+(pre$>$8)+(pre$>$4)+(pre$>$2)+(pre$>$1))$<$$<$R\+C\+C\+\_\+\+H\+P\+R\+E\+\_\+\+S\+H\+I\+F\+T )}\label{clock__conf_8h_a9774b35a3ab8a03b73998c64363078ff}
+
+\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gaa1425fce5bac8350e2064989025aa082}{I\+S\+\_\+\+H\+S\+I}~1
+\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gab0b6fc706cd43ac49946f4d5c66a8eb1}{I\+S\+\_\+\+H\+S\+E}~2
+\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga0242e7a973a1530936ec981855fcae5f}{I\+S\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+1}~7
+\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gaaed0ce9b11c552da90ac1cffd3f7c3fb}{I\+S\+\_\+\+P\+L\+L}~3
+\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga114515a7f91fdd8eff2ecb36cb8813f7}{I\+S\+\_\+\+P\+L\+L2}~4
+\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gaee88dba21d1388c0107ec6375eb3fe9c}{I\+S\+\_\+\+H\+S\+E\+\_\+\+D\+I\+V\+\_\+2}~5
+\item 
+\hypertarget{group__conf___c_l_o_c_k_gacab6d04b5fd9fa1c7f85a89d2abfa9ac}{\#define {\bfseries \+\_\+\+P\+L\+L\+M\+U\+L\+\_\+6\+\_\+5}~(65/10)}\label{group__conf___c_l_o_c_k_gacab6d04b5fd9fa1c7f85a89d2abfa9ac}
+
+\item 
+\hypertarget{group__conf___c_l_o_c_k_gacee707f661b47fe9e0744854d9ead0b2}{\#define {\bfseries \+\_\+\+U\+S\+B\+\_\+\+P\+R\+E\+\_\+1\+\_\+5}~(15/10)}\label{group__conf___c_l_o_c_k_gacee707f661b47fe9e0744854d9ead0b2}
+
+\item 
+\hypertarget{group__conf___c_l_o_c_k_gabbd628d8a30e6695b3715ae72a693e56}{\#define \hyperlink{group__conf___c_l_o_c_k_gabbd628d8a30e6695b3715ae72a693e56}{\+\_\+\+\_\+\+H\+S\+I}~8000000\+U\+L}\label{group__conf___c_l_o_c_k_gabbd628d8a30e6695b3715ae72a693e56}
+
+\begin{DoxyCompactList}\small\item\em Constante fixant la vitesse de l'horloge interne. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gad975c0a22cc8515304e7cbe6e489ddcd}{\+\_\+\+S\+Y\+S\+C\+L\+K\+\_\+\+S\+O\+U\+R\+C\+E}~\hyperlink{group__conf___c_l_o_c_k_gaaed0ce9b11c552da90ac1cffd3f7c3fb}{I\+S\+\_\+\+P\+L\+L}
+\begin{DoxyCompactList}\small\item\em Configure S\+Y\+S\+C\+L\+K. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga51dccf37cec784bd3f5230a1e94d9dfa}{\+\_\+\+P\+L\+L\+\_\+\+S\+O\+U\+R\+C\+E}~\hyperlink{group__conf___c_l_o_c_k_gab0b6fc706cd43ac49946f4d5c66a8eb1}{I\+S\+\_\+\+H\+S\+E}
+\begin{DoxyCompactList}\small\item\em Configure la P\+L\+L. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gaa1260de2fa33a5a6d4a7be72132f3049}{\+\_\+\+P\+L\+L\+X\+T\+P\+R\+E}~\hyperlink{group__conf___c_l_o_c_k_gab0b6fc706cd43ac49946f4d5c66a8eb1}{I\+S\+\_\+\+H\+S\+E}
+\begin{DoxyCompactList}\small\item\em Configure le prescaler en entrée de la P\+L\+L. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_gad730e10b5d236a647c9e999e72d0e895}{\+\_\+\+U\+S\+B\+\_\+\+P\+R\+E}~1
+\begin{DoxyCompactList}\small\item\em Configure le prescaler de l'U\+S\+B. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga60db718f30be6916848275c17fa93121}{\+\_\+\+P\+L\+L\+M\+U\+L}~9
+\begin{DoxyCompactList}\small\item\em Configure la multiplication de la P\+L\+L. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga3d81cc398f3d6af2ad0de7bdcb9ea161}{\+\_\+\+H\+P\+R\+E}~1
+\begin{DoxyCompactList}\small\item\em Configure le prescaler pour A\+H\+B. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga961057d8de29befd974b2d51240d34b7}{\+\_\+\+P\+P\+R\+E1}~2
+\begin{DoxyCompactList}\small\item\em Configure le prescaler pour A\+P\+B1. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga4a84605b8fbe4331f82f31572873bc19}{\+\_\+\+P\+P\+R\+E2}~1
+\begin{DoxyCompactList}\small\item\em Configure le prescaler pour A\+P\+B2. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__conf___c_l_o_c_k_ga74c51cc88682c8c186b7e3ec27ec8bdb}{\+\_\+\+A\+D\+C\+P\+R\+E}~6
+\begin{DoxyCompactList}\small\item\em Configure le prescaler pour l'horloge A\+D\+C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichier de configuration des horloges. 
+
+\begin{DoxyAuthor}{Author}
+Pascal A\+C\+C\+O (I\+N\+S\+A -\/ Toulouse,France) 
+
+Sébastien D\+I M\+E\+R\+C\+U\+R\+I\+O (I\+N\+S\+A -\/ Toulouse,France) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17/02/2012
+\end{DoxyDate}
+Ce fichier fait partie des pilotes pour S\+T\+M32 de l'I\+N\+S\+A de Toulouse, France. Merci de consulter le fichier L\+I\+C\+E\+N\+C\+E.\+txt au sujet des conditions de redistribution, modification et copyright concernant ce pilote. Le fichier L\+I\+C\+E\+N\+C\+E.\+txt doit faire partie des fichiers fournis avec ce pilote.
+
+Copyright (c) 2012, I\+N\+S\+A-\/\+G\+E\+I Toulouse, France. Tout droits réservés. 

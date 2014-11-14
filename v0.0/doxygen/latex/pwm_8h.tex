@@ -1,0 +1,83 @@
+\hypertarget{pwm_8h}{\section{drivers/pwm/pwm.h File Reference}
+\label{pwm_8h}\index{drivers/pwm/pwm.\+h@{drivers/pwm/pwm.\+h}}
+}
+
+
+S\+T\+M32\+F1xx P\+W\+M Driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pwm_8h_a8c6688a947546d40b517c15e1b135908}{P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle} (T\+I\+M\+\_\+\+Type\+Def $\ast$Timer, u8 Channel, u8 D\+T\+\_\+\+In\+\_\+\+Purcent)
+\begin{DoxyCompactList}\small\item\em Function changing the duty cycle (given in purcent) of a given timer channel. \end{DoxyCompactList}\item 
+void \hyperlink{pwm_8h_a69fad72ff86e6a83dd80e40106c50ff4}{P\+W\+M\+\_\+\+Init} (T\+I\+M\+\_\+\+Type\+Def $\ast$Timer, u8 Channel, float Frequence\+\_\+\+P\+W\+M\+\_\+\+Khz)
+\begin{DoxyCompactList}\small\item\em Function initialisin a P\+W\+M, this function initialize the given timer automatically. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+T\+M32\+F1xx P\+W\+M Driver. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/11/2014 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Guerric P\+A\+N\+I\+S
+\end{DoxyAuthor}
+Copyright (c) 2014, All rights reserved. 
+
+\subsection{Function Documentation}
+\hypertarget{pwm_8h_a69fad72ff86e6a83dd80e40106c50ff4}{\index{pwm.\+h@{pwm.\+h}!P\+W\+M\+\_\+\+Init@{P\+W\+M\+\_\+\+Init}}
+\index{P\+W\+M\+\_\+\+Init@{P\+W\+M\+\_\+\+Init}!pwm.\+h@{pwm.\+h}}
+\subsubsection[{P\+W\+M\+\_\+\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void P\+W\+M\+\_\+\+Init (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+\_\+\+Type\+Def $\ast$}]{Timer, }
+\item[{u8}]{Channel, }
+\item[{float}]{Frequence\+\_\+\+P\+W\+M\+\_\+\+Khz}
+\end{DoxyParamCaption}
+)}}\label{pwm_8h_a69fad72ff86e6a83dd80e40106c50ff4}
+
+
+Function initialisin a P\+W\+M, this function initialize the given timer automatically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+I\+M\+\_\+\+Type\+Def} & (T\+I\+M1, T\+I\+M2, ...) \\
+\hline
+{\em Channel} & =$>$ timer channel \\
+\hline
+{\em Frequence\+\_\+\+P\+W\+M\+\_\+\+Khz} & =$>$ pwm frequency (duty cyle is automatically set to 50\%) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{pwm_8h_a8c6688a947546d40b517c15e1b135908}{\index{pwm.\+h@{pwm.\+h}!P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle@{P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle}}
+\index{P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle@{P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle}!pwm.\+h@{pwm.\+h}}
+\subsubsection[{P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void P\+W\+M\+\_\+\+Init\+\_\+\+Duty\+\_\+\+Cycle (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+\_\+\+Type\+Def $\ast$}]{Timer, }
+\item[{u8}]{Channel, }
+\item[{u8}]{D\+T\+\_\+\+In\+\_\+\+Purcent}
+\end{DoxyParamCaption}
+)}}\label{pwm_8h_a8c6688a947546d40b517c15e1b135908}
+
+
+Function changing the duty cycle (given in purcent) of a given timer channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+I\+M\+\_\+\+Type\+Def} & (T\+I\+M1, T\+I\+M2, ...) \\
+\hline
+{\em Channel} & =$>$ timer channel \\
+\hline
+{\em D\+T\+\_\+\+In\+\_\+\+Purcent} & =$>$ new duty cycle in purcent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}

@@ -1,0 +1,59 @@
+\hypertarget{i2c_8c}{\section{drivers/i2c/i2c.c File Reference}
+\label{i2c_8c}\index{drivers/i2c/i2c.\+c@{drivers/i2c/i2c.\+c}}
+}
+
+
+S\+T\+M32\+F1xx I2\+C Driver.  
+
+
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{i2c_8c_addc954afeb2b168882fb42dca4a98de2}{I2\+C\+\_\+\+Init\+\_\+\+Clock} (I2\+C\+\_\+\+Type\+Def $\ast$I2\+C)
+\begin{DoxyCompactList}\small\item\em Function activating the clock of the given I2\+C bus. \end{DoxyCompactList}\item 
+\hypertarget{i2c_8c_abefdc3977a1a4cede9a27909d46c6c29}{void {\bfseries init\+\_\+i2c\+\_\+400k\+Hz} (I2\+C\+\_\+\+Type\+Def $\ast$I2\+C)}\label{i2c_8c_abefdc3977a1a4cede9a27909d46c6c29}
+
+\item 
+\hypertarget{i2c_8c_a814fed8aa45faf85f00d1b010d347e79}{void {\bfseries write\+\_\+i2c} (I2\+C\+\_\+\+Type\+Def $\ast$I2\+C, u8 slave\+\_\+addr, u8 register\+\_\+addr, u8 data)}\label{i2c_8c_a814fed8aa45faf85f00d1b010d347e79}
+
+\item 
+\hypertarget{i2c_8c_a84d6f6219ee1d460802822073eed70f2}{void {\bfseries read\+\_\+i2c} (I2\+C\+\_\+\+Type\+Def $\ast$I2\+C, u8 slave\+\_\+addr, u8 register\+\_\+addr, u8 $\ast$trame\+\_\+received)}\label{i2c_8c_a84d6f6219ee1d460802822073eed70f2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+T\+M32\+F1xx I2\+C Driver. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/11/2014 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Guerric P\+A\+N\+I\+S
+\end{DoxyAuthor}
+Copyright (c) 2014, All rights reserved. 
+
+\subsection{Function Documentation}
+\hypertarget{i2c_8c_addc954afeb2b168882fb42dca4a98de2}{\index{i2c.\+c@{i2c.\+c}!I2\+C\+\_\+\+Init\+\_\+\+Clock@{I2\+C\+\_\+\+Init\+\_\+\+Clock}}
+\index{I2\+C\+\_\+\+Init\+\_\+\+Clock@{I2\+C\+\_\+\+Init\+\_\+\+Clock}!i2c.\+c@{i2c.\+c}}
+\subsubsection[{I2\+C\+\_\+\+Init\+\_\+\+Clock}]{\setlength{\rightskip}{0pt plus 5cm}char I2\+C\+\_\+\+Init\+\_\+\+Clock (
+\begin{DoxyParamCaption}
+\item[{I2\+C\+\_\+\+Type\+Def $\ast$}]{I2\+C}
+\end{DoxyParamCaption}
+)}}\label{i2c_8c_addc954afeb2b168882fb42dca4a98de2}
+
+
+Function activating the clock of the given I2\+C bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I2\+C\+\_\+\+Type\+Def} & (I2\+C1, I2\+C2, ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if done correctly, 0 if not 
+\end{DoxyReturn}

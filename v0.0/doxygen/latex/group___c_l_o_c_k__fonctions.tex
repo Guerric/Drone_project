@@ -1,0 +1,110 @@
+\hypertarget{group___c_l_o_c_k__fonctions}{\section{Fonctions}
+\label{group___c_l_o_c_k__fonctions}\index{Fonctions@{Fonctions}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___c_l_o_c_k__fonctions_ga955f31a13011ed29d9bc0050eaba9ab4}{C\+L\+O\+C\+K\+\_\+\+Configure} (void)
+\begin{DoxyCompactList}\small\item\em Initialise les horloges. \end{DoxyCompactList}\item 
+u32 \hyperlink{group___c_l_o_c_k__fonctions_gaad3b9e53bdbf363ff2d8079afd54e4c7}{C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K} (void)
+\begin{DoxyCompactList}\small\item\em Fourni l'horloge H\+C\+L\+K. \end{DoxyCompactList}\item 
+u32 \hyperlink{group___c_l_o_c_k__fonctions_gab3e649f8825a3738fbffde390aecece2}{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1} (void)
+\begin{DoxyCompactList}\small\item\em Fourni l'horloge P\+C\+L\+K1. \end{DoxyCompactList}\item 
+u32 \hyperlink{group___c_l_o_c_k__fonctions_gaf75d59f7bf532086205a478d4ab414a1}{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2} (void)
+\begin{DoxyCompactList}\small\item\em Fourni l'horloge P\+C\+L\+K2. \end{DoxyCompactList}\item 
+u32 \hyperlink{group___c_l_o_c_k__fonctions_ga0518e4a9cf60eff33ff185bc46dc1963}{C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K} (void $\ast$timer)
+\begin{DoxyCompactList}\small\item\em Fourni l'horloge Timer. \end{DoxyCompactList}\item 
+u32 \hyperlink{group___c_l_o_c_k__fonctions_ga4197af9a5574e36f76d5d5afa274b054}{C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K} (void)
+\begin{DoxyCompactList}\small\item\em Fourni l'horloge A\+D\+C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___c_l_o_c_k__fonctions_ga955f31a13011ed29d9bc0050eaba9ab4}{\index{Fonctions@{Fonctions}!C\+L\+O\+C\+K\+\_\+\+Configure@{C\+L\+O\+C\+K\+\_\+\+Configure}}
+\index{C\+L\+O\+C\+K\+\_\+\+Configure@{C\+L\+O\+C\+K\+\_\+\+Configure}!Fonctions@{Fonctions}}
+\subsubsection[{C\+L\+O\+C\+K\+\_\+\+Configure}]{\setlength{\rightskip}{0pt plus 5cm}void C\+L\+O\+C\+K\+\_\+\+Configure (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___c_l_o_c_k__fonctions_ga955f31a13011ed29d9bc0050eaba9ab4}
+
+
+Initialise les horloges. 
+
+Règle le système d'horloge R\+C\+C du micro, conformément aux réglages configurés dans le fichier drivers\+\_\+conf.\+h \hypertarget{group___c_l_o_c_k__fonctions_ga4197af9a5574e36f76d5d5afa274b054}{\index{Fonctions@{Fonctions}!C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K@{C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K}}
+\index{C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K@{C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K}!Fonctions@{Fonctions}}
+\subsubsection[{C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K}]{\setlength{\rightskip}{0pt plus 5cm}u32 C\+L\+O\+C\+K\+\_\+\+Get\+A\+D\+C\+C\+L\+K (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___c_l_o_c_k__fonctions_ga4197af9a5574e36f76d5d5afa274b054}
+
+
+Fourni l'horloge A\+D\+C. 
+
+Retourne la fréquence, en Hz, de l'horloge A\+D\+C, après le diviseur A\+D\+C \begin{DoxyReturn}{Returns}
+Fréquence en Hz de l'A\+D\+C 
+\end{DoxyReturn}
+\hypertarget{group___c_l_o_c_k__fonctions_gaad3b9e53bdbf363ff2d8079afd54e4c7}{\index{Fonctions@{Fonctions}!C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K@{C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K}}
+\index{C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K@{C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K}!Fonctions@{Fonctions}}
+\subsubsection[{C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K}]{\setlength{\rightskip}{0pt plus 5cm}u32 C\+L\+O\+C\+K\+\_\+\+Get\+H\+C\+L\+K (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___c_l_o_c_k__fonctions_gaad3b9e53bdbf363ff2d8079afd54e4c7}
+
+
+Fourni l'horloge H\+C\+L\+K. 
+
+Retourne la fréquence, en Hz, de l'horloge H\+C\+L\+K, en sortie du diviseur A\+H\+B (aussi fréquence C\+P\+U) \begin{DoxyReturn}{Returns}
+Fréquence en Hz de l'horloge H\+C\+L\+K 
+\end{DoxyReturn}
+\hypertarget{group___c_l_o_c_k__fonctions_gab3e649f8825a3738fbffde390aecece2}{\index{Fonctions@{Fonctions}!C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1@{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1}}
+\index{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1@{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1}!Fonctions@{Fonctions}}
+\subsubsection[{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1}]{\setlength{\rightskip}{0pt plus 5cm}u32 C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K1 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___c_l_o_c_k__fonctions_gab3e649f8825a3738fbffde390aecece2}
+
+
+Fourni l'horloge P\+C\+L\+K1. 
+
+Retourne la fréquence, en Hz, de l'horloge P\+C\+L\+K1, en sortie du diviseur A\+P\+B1 (périphériques lents) \begin{DoxyReturn}{Returns}
+Fréquence en Hz de l'horloge P\+C\+L\+K1 
+\end{DoxyReturn}
+\hypertarget{group___c_l_o_c_k__fonctions_gaf75d59f7bf532086205a478d4ab414a1}{\index{Fonctions@{Fonctions}!C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2@{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2}}
+\index{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2@{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2}!Fonctions@{Fonctions}}
+\subsubsection[{C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2}]{\setlength{\rightskip}{0pt plus 5cm}u32 C\+L\+O\+C\+K\+\_\+\+Get\+P\+C\+L\+K2 (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___c_l_o_c_k__fonctions_gaf75d59f7bf532086205a478d4ab414a1}
+
+
+Fourni l'horloge P\+C\+L\+K2. 
+
+Retourne la fréquence, en Hz, de l'horloge P\+C\+L\+K2, en sortie du diviseur A\+P\+B2 (périphériques rapides) \begin{DoxyReturn}{Returns}
+Fréquence en Hz de l'horloge P\+C\+L\+K2 
+\end{DoxyReturn}
+\hypertarget{group___c_l_o_c_k__fonctions_ga0518e4a9cf60eff33ff185bc46dc1963}{\index{Fonctions@{Fonctions}!C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K@{C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K}}
+\index{C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K@{C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K}!Fonctions@{Fonctions}}
+\subsubsection[{C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K}]{\setlength{\rightskip}{0pt plus 5cm}u32 C\+L\+O\+C\+K\+\_\+\+Get\+T\+I\+M\+C\+L\+K (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{timer}
+\end{DoxyParamCaption}
+)}}\label{group___c_l_o_c_k__fonctions_ga0518e4a9cf60eff33ff185bc46dc1963}
+
+
+Fourni l'horloge Timer. 
+
+Retourne la fréquence, en Hz, du timer indiqué en paramètre 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timer} & Pointeur sur la structure de registre du timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fréquence en Hz du timer indiqué en paramètre. 
+\end{DoxyReturn}

@@ -5,5 +5,6 @@ release/main.o: sources/main.c ../stm32lib/stm32f10x/boot/stm32f10x.h \
  C:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include/core_cmInstr.h \
  C:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include/core_cmFunc.h \
  ../stm32lib/stm32f10x/boot/system_stm32f10x.h drivers/clock/clock.h \
- drivers/gpio/gpio.h drivers/timer/timer1234.h drivers/adc/adc.h \
- drivers/pwm/pwm.h drivers/i2c/i2c.h drivers/motor.h drivers/sensors.h
+ drivers/gpio/gpio.h drivers/timer/timer234.h drivers/adc/adc.h \
+ drivers/pwm/pwm.h drivers/i2c/i2c.h drivers/services/motor.h \
+ drivers/services/sensors.h

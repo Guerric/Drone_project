@@ -1,0 +1,203 @@
+\hypertarget{gpio_8c}{\section{drivers/gpio/gpio.c File Reference}
+\label{gpio_8c}\index{drivers/gpio/gpio.\+c@{drivers/gpio/gpio.\+c}}
+}
+
+
+S\+T\+M32\+F1xx G\+P\+I\+O Driver.  
+
+
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{gpio_8c_a722c8266baff51a2112b312114e4f954}{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port)
+\begin{DoxyCompactList}\small\item\em Function activating the clock of the righ port you wqnt to configure. \end{DoxyCompactList}\item 
+char \hyperlink{gpio_8c_af88fbd81cac2c2797201f4c40b34738a}{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port, u8 Pin, \hyperlink{gpio_8h_ae72911773cf7463be1a5ee9937c08152}{O\+U\+T\+\_\+\+Type} Type, \hyperlink{gpio_8h_aef3f8ecc162ba4e4c5946c17b48f15bb}{O\+U\+T\+\_\+\+Speed} Speed)
+\begin{DoxyCompactList}\small\item\em //\+Configure an I\+O as output \end{DoxyCompactList}\item 
+char \hyperlink{gpio_8c_a4534b12ccf652952d61030493c4559ea}{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port, u8 Pin, \hyperlink{gpio_8h_aeee0661e5ef6da55f0d7b17547ba638a}{I\+N\+\_\+\+Type} Type)
+\begin{DoxyCompactList}\small\item\em //\+Configure an I\+O as input \end{DoxyCompactList}\item 
+void \hyperlink{gpio_8c_a59c1930b599ef7e5deab1059e23638fb}{Port\+\_\+\+I\+O\+\_\+\+Set} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port, u8 Broche)
+\begin{DoxyCompactList}\small\item\em //\+Set output high \end{DoxyCompactList}\item 
+void \hyperlink{gpio_8c_a75c3efc131d00c8462b2e763afa84798}{Port\+\_\+\+I\+O\+\_\+\+Reset} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port, u8 Broche)
+\begin{DoxyCompactList}\small\item\em //\+Set output low \end{DoxyCompactList}\item 
+void \hyperlink{gpio_8c_aa45394801abeb0fab5f3520cf4eed586}{Port\+\_\+\+I\+O\+\_\+\+Blink} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port, u8 Broche)
+\begin{DoxyCompactList}\small\item\em //\+Change the state of an I\+O \end{DoxyCompactList}\item 
+char \hyperlink{gpio_8c_a094e4888e996ef8827ecb07c61c46e2a}{Port\+\_\+\+I\+O\+\_\+\+Read} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$Port, u8 Broche)
+\begin{DoxyCompactList}\small\item\em //\+Read an I\+O state \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+T\+M32\+F1xx G\+P\+I\+O Driver. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/11/2014 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Guerric P\+A\+N\+I\+S
+\end{DoxyAuthor}
+Copyright (c) 2014, All rights reserved. 
+
+\subsection{Function Documentation}
+\hypertarget{gpio_8c_aa45394801abeb0fab5f3520cf4eed586}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Blink@{Port\+\_\+\+I\+O\+\_\+\+Blink}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Blink@{Port\+\_\+\+I\+O\+\_\+\+Blink}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Blink}]{\setlength{\rightskip}{0pt plus 5cm}void Port\+\_\+\+I\+O\+\_\+\+Blink (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port, }
+\item[{u8}]{Broche}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_aa45394801abeb0fab5f3520cf4eed586}
+
+
+//\+Change the state of an I\+O 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & =$>$ G\+P\+I\+O\+A, G\+P\+I\+O\+B ... \\
+\hline
+{\em u8} & Pin =$>$ correcponding pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{gpio_8c_a722c8266baff51a2112b312114e4f954}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock@{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock@{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock}]{\setlength{\rightskip}{0pt plus 5cm}char Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Clock (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_a722c8266baff51a2112b312114e4f954}
+
+
+Function activating the clock of the righ port you wqnt to configure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & (G\+P\+I\+O\+A, G\+P\+I\+O\+B ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if done correctly, 0 if not 
+\end{DoxyReturn}
+\hypertarget{gpio_8c_a4534b12ccf652952d61030493c4559ea}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input@{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input@{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input}]{\setlength{\rightskip}{0pt plus 5cm}char Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Input (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port, }
+\item[{u8}]{Pin, }
+\item[{{\bf I\+N\+\_\+\+Type}}]{Type}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_a4534b12ccf652952d61030493c4559ea}
+
+
+//\+Configure an I\+O as input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & =$>$ G\+P\+I\+O\+A, G\+P\+I\+O\+B ... \\
+\hline
+{\em u8} & Pin =$>$ correcponding pin \\
+\hline
+{\em I\+N\+\_\+\+Type} & =$>$ select the input type (analog, floating ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if done correctly 
+\end{DoxyReturn}
+\hypertarget{gpio_8c_af88fbd81cac2c2797201f4c40b34738a}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output@{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output@{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output}]{\setlength{\rightskip}{0pt plus 5cm}char Port\+\_\+\+I\+O\+\_\+\+Init\+\_\+\+Output (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port, }
+\item[{u8}]{Pin, }
+\item[{{\bf O\+U\+T\+\_\+\+Type}}]{Type, }
+\item[{{\bf O\+U\+T\+\_\+\+Speed}}]{Speed}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_af88fbd81cac2c2797201f4c40b34738a}
+
+
+//\+Configure an I\+O as output 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & =$>$ G\+P\+I\+O\+A, G\+P\+I\+O\+B ... \\
+\hline
+{\em u8} & Pin =$>$ correcponding pin \\
+\hline
+{\em O\+U\+T\+\_\+\+Type} & =$>$ select the output type (pushpull, open drain ...) \\
+\hline
+{\em O\+U\+T\+\_\+\+Speed} & =$>$ select the output speed (2, 10 or 50 M\+Hz) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if done correctly 
+\end{DoxyReturn}
+\hypertarget{gpio_8c_a094e4888e996ef8827ecb07c61c46e2a}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Read@{Port\+\_\+\+I\+O\+\_\+\+Read}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Read@{Port\+\_\+\+I\+O\+\_\+\+Read}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}char Port\+\_\+\+I\+O\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port, }
+\item[{u8}]{Broche}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_a094e4888e996ef8827ecb07c61c46e2a}
+
+
+//\+Read an I\+O state 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & =$>$ G\+P\+I\+O\+A, G\+P\+I\+O\+B ... \\
+\hline
+{\em u8} & Pin =$>$ correcponding pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 or 1 according the state pin 
+\end{DoxyReturn}
+\hypertarget{gpio_8c_a75c3efc131d00c8462b2e763afa84798}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Reset@{Port\+\_\+\+I\+O\+\_\+\+Reset}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Reset@{Port\+\_\+\+I\+O\+\_\+\+Reset}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Port\+\_\+\+I\+O\+\_\+\+Reset (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port, }
+\item[{u8}]{Broche}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_a75c3efc131d00c8462b2e763afa84798}
+
+
+//\+Set output low 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & =$>$ G\+P\+I\+O\+A, G\+P\+I\+O\+B ... \\
+\hline
+{\em u8} & Pin =$>$ correcponding pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{gpio_8c_a59c1930b599ef7e5deab1059e23638fb}{\index{gpio.\+c@{gpio.\+c}!Port\+\_\+\+I\+O\+\_\+\+Set@{Port\+\_\+\+I\+O\+\_\+\+Set}}
+\index{Port\+\_\+\+I\+O\+\_\+\+Set@{Port\+\_\+\+I\+O\+\_\+\+Set}!gpio.\+c@{gpio.\+c}}
+\subsubsection[{Port\+\_\+\+I\+O\+\_\+\+Set}]{\setlength{\rightskip}{0pt plus 5cm}void Port\+\_\+\+I\+O\+\_\+\+Set (
+\begin{DoxyParamCaption}
+\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{Port, }
+\item[{u8}]{Broche}
+\end{DoxyParamCaption}
+)}}\label{gpio_8c_a59c1930b599ef7e5deab1059e23638fb}
+
+
+//\+Set output high 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+P\+I\+O\+\_\+\+Type\+Def} & =$>$ G\+P\+I\+O\+A, G\+P\+I\+O\+B ... \\
+\hline
+{\em u8} & Pin =$>$ correcponding pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}

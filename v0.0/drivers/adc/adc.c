@@ -1,13 +1,30 @@
+/** 
+* \file adc.c
+* \brief STM32F1xx ADC Driver
+* \version 0.1
+* \date 14/11/2014
+* \author Guerric PANIS
+*
+* Copyright (c) 2014, All rights reserved.
+*
+*/
+
 #include "adc.h"
+
+char ADC_Init_Clock (ADC_TypeDef * ADC){
+	char i=1;
+	if (ADC==ADC1){
+		(RCC->APB2ENR)|= RCC_APB2ENR_ADC1EN;
+	}else if (ADC==ADC2){
+		(RCC->APB2ENR)|= RCC_APB2ENR_ADC2EN;
+	}else{
+		i=0;
+	}
+	return i;
+}
 
 float Init_ADC_Single_Conv (ADC_TypeDef * ADC, u8 channel, u8 n_cycles){
 	float result = 0.0;
-	//turn ON clock ADCx
-	if (ADC==ADC1){
-		(RCC->APB2ENR) |= RCC_APB2ENR_ADC1EN;
-	}else if (ADC==ADC2){
-		(RCC->APB2ENR) |= RCC_APB2ENR_ADC2EN;
-	};
 		
 	//Select channel regular sequence (single channel)
 	ADC->SQR3=0x00;
@@ -34,12 +51,4 @@ float Init_ADC_Single_Conv (ADC_TypeDef * ADC, u8 channel, u8 n_cycles){
 	result=ADC1->DR;
 		
 	return result;	
-}
-
-//fonction valeur absolue d'un float
-float abs_float(float a){
-	if (a<0.0){
-		a=-a;
-	}
-	return a;
 }

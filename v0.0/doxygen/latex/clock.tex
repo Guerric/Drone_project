@@ -1,0 +1,24 @@
+\hypertarget{clock_CLOCK_intro}{}\section{Présentation}\label{clock_CLOCK_intro}
+Le pilote C\+L\+O\+C\+K fournit le support pour la configuration et le contrôle des horloges du M\+C\+U.\hypertarget{clock_CLOCK_dep}{}\section{Dépendances}\label{clock_CLOCK_dep}
+Aucune dépendance à un autre pilote\hypertarget{clock_CLOCK_compinfo}{}\section{Clefs de compilation}\label{clock_CLOCK_compinfo}
+Les clefs de compilation suivantes peuvent être utilisées\+:
+\begin{DoxyItemize}
+\item S\+T\+M32\+F10\+X\+\_\+\+C\+L \+: Configure les horloges pour un micro S\+T\+M32\+F107
+\item S\+T\+M32\+F10\+X\+\_\+\+M\+D \+: Configure les horloges pour un micro S\+T\+M32\+F103
+\end{DoxyItemize}\hypertarget{clock_CLOCK_reference}{}\section{Liste des A\+P\+I relatif à ce pilote}\label{clock_CLOCK_reference}
+
+\begin{DoxyItemize}
+\item \hyperlink{group___c_l_o_c_k__driver}{C\+L\+O\+C\+K}
+\end{DoxyItemize}\hypertarget{clock_CLOCK_exemples}{}\section{Exemples d'utilisation}\label{clock_CLOCK_exemples}
+Exemple 1\+: Initialise les horloges du micro tel que configuré dans le fichier \hyperlink{clock__conf_8h}{clock\+\_\+conf.\+h}
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "\hyperlink{clock_8h}{clock.h}"}
+
+\textcolor{keywordtype}{void} main (\textcolor{keywordtype}{void})
+\{
+   \hyperlink{group___c_l_o_c_k__fonctions_ga955f31a13011ed29d9bc0050eaba9ab4}{CLOCK\_Configure}();
+\}
+\end{DoxyCode}
+ 

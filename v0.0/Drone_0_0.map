@@ -1,20 +1,20 @@
 Archive member included because of file (symbol)
 
 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_addsubsf3.o)
-                              ./release/timer1234.o (__aeabi_fsub)
+                              ./release/timer234.o (__aeabi_fsub)
 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_muldivsf3.o)
-                              ./release/timer1234.o (__aeabi_fmul)
+                              ./release/timer234.o (__aeabi_fmul)
 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_cmpsf2.o)
-                              ./release/adc.o (__aeabi_fcmplt)
+                              ./release/main.o (__aeabi_fcmplt)
 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
-                              ./release/timer1234.o (__aeabi_f2uiz)
+                              ./release/timer234.o (__aeabi_f2uiz)
 
 Allocating common symbols
 Common symbol       size              file
 
 Function_TIM2       0x4               ./release/pwm.o
-Function_I2C        0x4               ./release/i2c.o
 Function_TIM4       0x4               ./release/pwm.o
+clock               0x4               ./release/main.o
 Function_TIM3       0x4               ./release/pwm.o
 
 Memory Configuration
@@ -30,12 +30,12 @@ LOAD ./release/adc.o
 LOAD ./release/clock.o
 LOAD ./release/gpio.o
 LOAD ./release/pwm.o
-LOAD ./release/timer1234.o
 LOAD ./release/i2c.o
-LOAD ./release/motor.o
-LOAD ./release/sensors.o
+LOAD ./release/timer234.o
 LOAD ./release/main.o
 LOAD ./release/startup-gcc.o
+LOAD ./release/motor.o
+LOAD ./release/sensors.o
 LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libm.a
 START GROUP
 LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a
@@ -47,145 +47,144 @@ LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-no
 LOAD c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/lib/thumb2\libm.a
 END GROUP
 
-.text           0x08000000     0x1184
+.text           0x08000000     0x110c
  *(.isr_vector)
  .isr_vector    0x08000000       0xec ./release/startup-gcc.o
                 0x08000000                __isr_vector
  *(.text*)
- .text          0x080000ec       0xc8 ./release/adc.o
-                0x080000ec                Init_ADC_Single_Conv
-                0x0800019c                abs_float
- .text          0x080001b4       0xa8 ./release/clock.o
-                0x080001b4                CLOCK_Configure
-                0x08000234                CLOCK_GetTIMCLK
-                0x0800023c                CLOCK_GetHCLK
-                0x08000244                CLOCK_GetPCLK1
-                0x0800024c                CLOCK_GetPCLK2
-                0x08000254                CLOCK_GetADCCLK
- .text          0x0800025c      0x26c ./release/gpio.o
-                0x0800025c                Port_IO_Init_Clock
-                0x080002b8                Port_IO_Init_Output
-                0x08000318                Port_IO_Init_AF_Output
-                0x08000378                Port_IO_Init_AFOD_Output
-                0x080003d8                Port_IO_Init_Input
-                0x08000438                Port_IO_Init_ADC
-                0x08000470                Port_IO_Set
-                0x08000484                Port_IO_Reset
-                0x08000498                Port_IO_Blink
-                0x080004b4                Port_IO_Read
- .text          0x080004c8       0xec ./release/pwm.o
-                0x080004c8                PWM_Init_Duty_Cycle
-                0x0800050c                PWM_Init
- .text          0x080005b4      0x1c0 ./release/timer1234.o
-                0x080005b4                Timer_Init_Clock
-                0x080005fc                Timer_1234_Init
-                0x08000684                TIM2_IRQHandler
-                0x080006a8                TIM3_IRQHandler
-                0x080006cc                TIM4_IRQHandler
-                0x080006f0                Timer_Active_IT
- .text          0x08000774      0x178 ./release/i2c.o
-                0x08000774                I2C1_EV_IRQHandler
-                0x080007a0                init_i2c_400kHz
-                0x08000868                write_i2c
-                0x080008b0                read_i2c
- .text          0x080008ec      0x148 ./release/motor.o
-                0x080008ec                configure_motor
-                0x08000918                setup_motor
-                0x08000998                set_motor_speed
- .text          0x08000a34       0x3c ./release/sensors.o
-                0x08000a34                init_sensors_bus
-                0x08000a48                update_x_translation
- .text          0x08000a70       0xa4 ./release/main.o
-                0x08000a70                main
- .text          0x08000b14       0x88 ./release/startup-gcc.o
-                0x08000b14                Reset_Handler
-                0x08000b84                SystemInit
-                0x08000b86                NMI_Handler
-                0x08000b88                HardFault_Handler
-                0x08000b8a                MemManage_Handler
-                0x08000b8c                BusFault_Handler
-                0x08000b8e                UsageFault_Handler
-                0x08000b90                SVC_Handler
-                0x08000b92                DebugMon_Handler
-                0x08000b94                PendSV_Handler
-                0x08000b96                SysTick_Handler
-                0x08000b98                DMAChannel1_IRQHandler
-                0x08000b98                DMAChannel7_IRQHandler
-                0x08000b98                SPI1_IRQHandler
-                0x08000b98                TAMPER_IRQHandler
-                0x08000b98                DMAChannel4_IRQHandler
-                0x08000b98                I2C2_EV_IRQHandler
-                0x08000b98                EXTI0_IRQHandler
-                0x08000b98                EXTI3_IRQHandler
-                0x08000b98                TIM1_CC_IRQHandler
-                0x08000b98                CAN1_RX1_IRQHandler
-                0x08000b98                RCC_IRQHandler
-                0x08000b98                TIM1_TRG_COM_IRQHandler
-                0x08000b98                EXTI15_10_IRQHandler
-                0x08000b98                ADC_IRQHandler
-                0x08000b98                DMAChannel5_IRQHandler
-                0x08000b98                EXTI9_5_IRQHandler
-                0x08000b98                DMAChannel2_IRQHandler
-                0x08000b98                SPI2_IRQHandler
-                0x08000b98                PVD_IRQHandler
-                0x08000b98                RTC_IRQHandler
-                0x08000b98                EXTI4_IRQHandler
-                0x08000b98                USB_LP_CAN1_RX0_IRQHandler
-                0x08000b98                USART3_IRQHandler
-                0x08000b98                USB_HP_CAN1_TX_IRQHandler
-                0x08000b98                TIM1_UP_IRQHandler
-                0x08000b98                WWDG_IRQHandler
-                0x08000b98                TIM1_BRK_IRQHandler
-                0x08000b98                EXTI1_IRQHandler
-                0x08000b98                RTCAlarm_IRQHandler
-                0x08000b98                USART2_IRQHandler
-                0x08000b98                I2C2_ER_IRQHandler
-                0x08000b98                CAN1_SCE_IRQHandler
-                0x08000b98                FLASH_IRQHandler
-                0x08000b98                DMAChannel6_IRQHandler
-                0x08000b98                DMAChannel3_IRQHandler
-                0x08000b98                EXTI2_IRQHandler
-                0x08000b98                USART1_IRQHandler
-                0x08000b98                I2C1_ER_IRQHandler
-                0x08000b98                USBWakeUp_IRQHandler
- .text          0x08000b9c      0x21c c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_addsubsf3.o)
-                0x08000b9c                __aeabi_frsub
-                0x08000ba4                __subsf3
-                0x08000ba4                __aeabi_fsub
-                0x08000ba8                __aeabi_fadd
-                0x08000ba8                __addsf3
-                0x08000d08                __aeabi_ui2f
-                0x08000d08                __floatunsisf
-                0x08000d10                __aeabi_i2f
-                0x08000d10                __floatsisf
-                0x08000d2c                __aeabi_ul2f
-                0x08000d2c                __floatundisf
-                0x08000d3c                __aeabi_l2f
-                0x08000d3c                __floatdisf
- .text          0x08000db8      0x2a0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_muldivsf3.o)
-                0x08000db8                __mulsf3
-                0x08000db8                __aeabi_fmul
-                0x08000f20                __aeabi_fdiv
-                0x08000f20                __divsf3
- .text          0x08001058       0xec c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_cmpsf2.o)
-                0x08001058                __gesf2
-                0x08001058                __gtsf2
-                0x08001060                __lesf2
-                0x08001060                __ltsf2
-                0x08001068                __nesf2
-                0x08001068                __eqsf2
-                0x08001068                __cmpsf2
-                0x080010c8                __aeabi_cfrcmple
-                0x080010d0                __aeabi_cfcmpeq
-                0x080010d0                __aeabi_cfcmple
-                0x080010e0                __aeabi_fcmpeq
-                0x080010f4                __aeabi_fcmplt
-                0x08001108                __aeabi_fcmple
-                0x0800111c                __aeabi_fcmpge
-                0x08001130                __aeabi_fcmpgt
- .text          0x08001144       0x40 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
-                0x08001144                __fixunssfsi
-                0x08001144                __aeabi_f2uiz
+ .text          0x080000ec       0xc4 ./release/adc.o
+                0x080000ec                ADC_Init_Clock
+                0x0800012c                Init_ADC_Single_Conv
+ .text          0x080001b0       0xa8 ./release/clock.o
+                0x080001b0                CLOCK_Configure
+                0x08000230                CLOCK_GetTIMCLK
+                0x08000238                CLOCK_GetHCLK
+                0x08000240                CLOCK_GetPCLK1
+                0x08000248                CLOCK_GetPCLK2
+                0x08000250                CLOCK_GetADCCLK
+ .text          0x08000258      0x164 ./release/gpio.o
+                0x08000258                Port_IO_Init_Clock
+                0x080002b4                Port_IO_Init_Output
+                0x0800030c                Port_IO_Init_Input
+                0x08000364                Port_IO_Set
+                0x08000378                Port_IO_Reset
+                0x0800038c                Port_IO_Blink
+                0x080003a8                Port_IO_Read
+ .text          0x080003bc       0xec ./release/pwm.o
+                0x080003bc                PWM_Init_Duty_Cycle
+                0x08000400                PWM_Init
+ .text          0x080004a8      0x1ac ./release/i2c.o
+                0x080004a8                I2C_Init_Clock
+                0x080004e8                init_i2c_400kHz
+                0x080005b0                write_i2c
+                0x080005f8                read_i2c
+ .text          0x08000654      0x1e8 ./release/timer234.o
+                0x08000654                Timer_Init_Clock
+                0x080006ac                Timer_234_Init
+                0x0800074c                TIM2_IRQHandler
+                0x08000770                TIM3_IRQHandler
+                0x08000794                TIM4_IRQHandler
+                0x080007b8                Timer_Active_IT
+ .text          0x0800083c       0xe8 ./release/main.o
+                0x0800083c                abs_float
+                0x08000854                main
+ .text          0x08000924       0x88 ./release/startup-gcc.o
+                0x08000924                Reset_Handler
+                0x08000994                SystemInit
+                0x08000996                NMI_Handler
+                0x08000998                HardFault_Handler
+                0x0800099a                MemManage_Handler
+                0x0800099c                BusFault_Handler
+                0x0800099e                UsageFault_Handler
+                0x080009a0                SVC_Handler
+                0x080009a2                DebugMon_Handler
+                0x080009a4                PendSV_Handler
+                0x080009a6                SysTick_Handler
+                0x080009a8                DMAChannel1_IRQHandler
+                0x080009a8                DMAChannel7_IRQHandler
+                0x080009a8                SPI1_IRQHandler
+                0x080009a8                TAMPER_IRQHandler
+                0x080009a8                DMAChannel4_IRQHandler
+                0x080009a8                I2C2_EV_IRQHandler
+                0x080009a8                EXTI0_IRQHandler
+                0x080009a8                RTC_IRQHandler
+                0x080009a8                EXTI3_IRQHandler
+                0x080009a8                CAN1_RX1_IRQHandler
+                0x080009a8                I2C1_EV_IRQHandler
+                0x080009a8                RCC_IRQHandler
+                0x080009a8                TIM1_TRG_COM_IRQHandler
+                0x080009a8                EXTI15_10_IRQHandler
+                0x080009a8                ADC_IRQHandler
+                0x080009a8                DMAChannel5_IRQHandler
+                0x080009a8                EXTI9_5_IRQHandler
+                0x080009a8                DMAChannel2_IRQHandler
+                0x080009a8                SPI2_IRQHandler
+                0x080009a8                PVD_IRQHandler
+                0x080009a8                TIM1_CC_IRQHandler
+                0x080009a8                EXTI4_IRQHandler
+                0x080009a8                USB_LP_CAN1_RX0_IRQHandler
+                0x080009a8                USART3_IRQHandler
+                0x080009a8                USB_HP_CAN1_TX_IRQHandler
+                0x080009a8                TIM1_UP_IRQHandler
+                0x080009a8                WWDG_IRQHandler
+                0x080009a8                TIM1_BRK_IRQHandler
+                0x080009a8                EXTI1_IRQHandler
+                0x080009a8                RTCAlarm_IRQHandler
+                0x080009a8                USART2_IRQHandler
+                0x080009a8                I2C2_ER_IRQHandler
+                0x080009a8                CAN1_SCE_IRQHandler
+                0x080009a8                FLASH_IRQHandler
+                0x080009a8                DMAChannel6_IRQHandler
+                0x080009a8                DMAChannel3_IRQHandler
+                0x080009a8                EXTI2_IRQHandler
+                0x080009a8                USART1_IRQHandler
+                0x080009a8                I2C1_ER_IRQHandler
+                0x080009a8                USBWakeUp_IRQHandler
+ .text          0x080009ac      0x150 ./release/motor.o
+                0x080009ac                configure_motor
+                0x080009e0                setup_motor
+                0x08000a60                set_motor_speed
+ .text          0x08000afc       0x28 ./release/sensors.o
+                0x08000afc                init_sensors_bus
+                0x08000b0c                read_x_translation
+ .text          0x08000b24      0x21c c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_addsubsf3.o)
+                0x08000b24                __aeabi_frsub
+                0x08000b2c                __subsf3
+                0x08000b2c                __aeabi_fsub
+                0x08000b30                __aeabi_fadd
+                0x08000b30                __addsf3
+                0x08000c90                __aeabi_ui2f
+                0x08000c90                __floatunsisf
+                0x08000c98                __aeabi_i2f
+                0x08000c98                __floatsisf
+                0x08000cb4                __aeabi_ul2f
+                0x08000cb4                __floatundisf
+                0x08000cc4                __aeabi_l2f
+                0x08000cc4                __floatdisf
+ .text          0x08000d40      0x2a0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_muldivsf3.o)
+                0x08000d40                __mulsf3
+                0x08000d40                __aeabi_fmul
+                0x08000ea8                __aeabi_fdiv
+                0x08000ea8                __divsf3
+ .text          0x08000fe0       0xec c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_cmpsf2.o)
+                0x08000fe0                __gesf2
+                0x08000fe0                __gtsf2
+                0x08000fe8                __lesf2
+                0x08000fe8                __ltsf2
+                0x08000ff0                __nesf2
+                0x08000ff0                __eqsf2
+                0x08000ff0                __cmpsf2
+                0x08001050                __aeabi_cfrcmple
+                0x08001058                __aeabi_cfcmpeq
+                0x08001058                __aeabi_cfcmple
+                0x08001068                __aeabi_fcmpeq
+                0x0800107c                __aeabi_fcmplt
+                0x08001090                __aeabi_fcmple
+                0x080010a4                __aeabi_fcmpge
+                0x080010b8                __aeabi_fcmpgt
+ .text          0x080010cc       0x40 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
+                0x080010cc                __fixunssfsi
+                0x080010cc                __aeabi_f2uiz
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -201,28 +200,28 @@ END GROUP
  *(.rodata*)
  *(.eh_frame*)
 
-.glue_7         0x08001184        0x0
+.glue_7         0x0800110c        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x08001184        0x0
+.glue_7t        0x0800110c        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x08001184        0x0
+.vfp11_veneer   0x0800110c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08001184        0x0
+.v4_bx          0x0800110c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08001184                __exidx_start = .
+                0x0800110c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08001184                __exidx_end = .
-                0x08001184                __etext = .
+                0x0800110c                __exidx_end = .
+                0x0800110c                __etext = .
 
-.data           0x20000000        0x0 load address 0x08001184
+.data           0x20000000        0x0 load address 0x0800110c
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -230,12 +229,12 @@ END GROUP
  .data          0x20000000        0x0 ./release/clock.o
  .data          0x20000000        0x0 ./release/gpio.o
  .data          0x20000000        0x0 ./release/pwm.o
- .data          0x20000000        0x0 ./release/timer1234.o
  .data          0x20000000        0x0 ./release/i2c.o
- .data          0x20000000        0x0 ./release/motor.o
- .data          0x20000000        0x0 ./release/sensors.o
+ .data          0x20000000        0x0 ./release/timer234.o
  .data          0x20000000        0x0 ./release/main.o
  .data          0x20000000        0x0 ./release/startup-gcc.o
+ .data          0x20000000        0x0 ./release/motor.o
+ .data          0x20000000        0x0 ./release/sensors.o
  .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_addsubsf3.o)
  .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_muldivsf3.o)
  .data          0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_cmpsf2.o)
@@ -257,19 +256,19 @@ END GROUP
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __data_end__ = .
 
-.bss            0x20000000       0x10 load address 0x08001184
+.bss            0x20000000       0x10 load address 0x0800110c
                 0x20000000                __bss_start__ = .
  *(.bss*)
  .bss           0x20000000        0x0 ./release/adc.o
  .bss           0x20000000        0x0 ./release/clock.o
  .bss           0x20000000        0x0 ./release/gpio.o
  .bss           0x20000000        0x0 ./release/pwm.o
- .bss           0x20000000        0x0 ./release/timer1234.o
  .bss           0x20000000        0x0 ./release/i2c.o
- .bss           0x20000000        0x0 ./release/motor.o
- .bss           0x20000000        0x0 ./release/sensors.o
+ .bss           0x20000000        0x0 ./release/timer234.o
  .bss           0x20000000        0x0 ./release/main.o
  .bss           0x20000000        0x0 ./release/startup-gcc.o
+ .bss           0x20000000        0x0 ./release/motor.o
+ .bss           0x20000000        0x0 ./release/sensors.o
  .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_addsubsf3.o)
  .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_muldivsf3.o)
  .bss           0x20000000        0x0 c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_cmpsf2.o)
@@ -279,8 +278,8 @@ END GROUP
                 0x20000000                Function_TIM2
                 0x20000004                Function_TIM4
                 0x20000008                Function_TIM3
- COMMON         0x2000000c        0x4 ./release/i2c.o
-                0x2000000c                Function_I2C
+ COMMON         0x2000000c        0x4 ./release/main.o
+                0x2000000c                clock
                 0x20000010                __bss_end__ = .
 
 .heap           0x20000010      0x800
@@ -301,94 +300,94 @@ END GROUP
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
 OUTPUT(./release/Drone_0_0.elf elf32-littlearm)
 
-.debug_abbrev   0x00000000      0xa0b
- .debug_abbrev  0x00000000       0xe3 ./release/adc.o
- .debug_abbrev  0x000000e3      0x11c ./release/clock.o
- .debug_abbrev  0x000001ff      0x12a ./release/gpio.o
- .debug_abbrev  0x00000329       0xf9 ./release/pwm.o
- .debug_abbrev  0x00000422      0x151 ./release/timer1234.o
- .debug_abbrev  0x00000573      0x17d ./release/i2c.o
- .debug_abbrev  0x000006f0      0x112 ./release/motor.o
- .debug_abbrev  0x00000802       0xf9 ./release/sensors.o
- .debug_abbrev  0x000008fb       0xfc ./release/main.o
- .debug_abbrev  0x000009f7       0x14 ./release/startup-gcc.o
+.debug_abbrev   0x00000000      0xa68
+ .debug_abbrev  0x00000000      0x10b ./release/adc.o
+ .debug_abbrev  0x0000010b      0x11c ./release/clock.o
+ .debug_abbrev  0x00000227      0x14f ./release/gpio.o
+ .debug_abbrev  0x00000376       0xf9 ./release/pwm.o
+ .debug_abbrev  0x0000046f      0x12c ./release/i2c.o
+ .debug_abbrev  0x0000059b      0x188 ./release/timer234.o
+ .debug_abbrev  0x00000723      0x131 ./release/main.o
+ .debug_abbrev  0x00000854       0x14 ./release/startup-gcc.o
+ .debug_abbrev  0x00000868      0x128 ./release/motor.o
+ .debug_abbrev  0x00000990       0xd8 ./release/sensors.o
 
-.debug_info     0x00000000     0x27a7
- .debug_info    0x00000000      0x33b ./release/adc.o
- .debug_info    0x0000033b      0x561 ./release/clock.o
- .debug_info    0x0000089c      0x430 ./release/gpio.o
- .debug_info    0x00000ccc      0x42c ./release/pwm.o
- .debug_info    0x000010f8      0x690 ./release/timer1234.o
- .debug_info    0x00001788      0x531 ./release/i2c.o
- .debug_info    0x00001cb9      0x4e8 ./release/motor.o
- .debug_info    0x000021a1      0x24e ./release/sensors.o
- .debug_info    0x000023ef      0x32f ./release/main.o
- .debug_info    0x0000271e       0x89 ./release/startup-gcc.o
+.debug_info     0x00000000     0x286a
+ .debug_info    0x00000000      0x350 ./release/adc.o
+ .debug_info    0x00000350      0x561 ./release/clock.o
+ .debug_info    0x000008b1      0x420 ./release/gpio.o
+ .debug_info    0x00000cd1      0x42c ./release/pwm.o
+ .debug_info    0x000010fd      0x496 ./release/i2c.o
+ .debug_info    0x00001593      0x6c5 ./release/timer234.o
+ .debug_info    0x00001c58      0x435 ./release/main.o
+ .debug_info    0x0000208d       0x89 ./release/startup-gcc.o
+ .debug_info    0x00002116      0x524 ./release/motor.o
+ .debug_info    0x0000263a      0x230 ./release/sensors.o
 
-.debug_line     0x00000000      0xd5f
- .debug_line    0x00000000      0x14c ./release/adc.o
- .debug_line    0x0000014c      0x165 ./release/clock.o
- .debug_line    0x000002b1      0x16d ./release/gpio.o
- .debug_line    0x0000041e      0x166 ./release/pwm.o
- .debug_line    0x00000584      0x173 ./release/timer1234.o
- .debug_line    0x000006f7      0x183 ./release/i2c.o
- .debug_line    0x0000087a      0x186 ./release/motor.o
- .debug_line    0x00000a00      0x14d ./release/sensors.o
- .debug_line    0x00000b4d      0x183 ./release/main.o
- .debug_line    0x00000cd0       0x8f ./release/startup-gcc.o
+.debug_line     0x00000000      0xd9f
+ .debug_line    0x00000000      0x14f ./release/adc.o
+ .debug_line    0x0000014f      0x165 ./release/clock.o
+ .debug_line    0x000002b4      0x168 ./release/gpio.o
+ .debug_line    0x0000041c      0x167 ./release/pwm.o
+ .debug_line    0x00000583      0x19f ./release/i2c.o
+ .debug_line    0x00000722      0x17c ./release/timer234.o
+ .debug_line    0x0000089e      0x18d ./release/main.o
+ .debug_line    0x00000a2b       0x8f ./release/startup-gcc.o
+ .debug_line    0x00000aba      0x1a7 ./release/motor.o
+ .debug_line    0x00000c61      0x13e ./release/sensors.o
 
-.debug_loc      0x00000000      0x8d9
- .debug_loc     0x00000000       0xc5 ./release/adc.o
- .debug_loc     0x000000c5       0x13 ./release/clock.o
- .debug_loc     0x000000d8      0x237 ./release/gpio.o
- .debug_loc     0x0000030f       0xfc ./release/pwm.o
- .debug_loc     0x0000040b      0x12f ./release/timer1234.o
- .debug_loc     0x0000053a      0x125 ./release/i2c.o
- .debug_loc     0x0000065f      0x191 ./release/motor.o
- .debug_loc     0x000007f0       0x5e ./release/sensors.o
- .debug_loc     0x0000084e       0x8b ./release/main.o
+.debug_loc      0x00000000      0x91a
+ .debug_loc     0x00000000       0xc4 ./release/adc.o
+ .debug_loc     0x000000c4       0x13 ./release/clock.o
+ .debug_loc     0x000000d7      0x1a0 ./release/gpio.o
+ .debug_loc     0x00000277       0xfc ./release/pwm.o
+ .debug_loc     0x00000373      0x138 ./release/i2c.o
+ .debug_loc     0x000004ab      0x195 ./release/timer234.o
+ .debug_loc     0x00000640       0xeb ./release/main.o
+ .debug_loc     0x0000072b      0x191 ./release/motor.o
+ .debug_loc     0x000008bc       0x5e ./release/sensors.o
 
 .debug_pubnames
-                0x00000000      0x473
+                0x00000000      0x409
  .debug_pubnames
-                0x00000000       0x39 ./release/adc.o
+                0x00000000       0x3e ./release/adc.o
  .debug_pubnames
-                0x00000039       0x86 ./release/clock.o
+                0x0000003e       0x86 ./release/clock.o
  .debug_pubnames
-                0x000000bf       0xea ./release/gpio.o
+                0x000000c4       0x9d ./release/gpio.o
  .debug_pubnames
-                0x000001a9       0x6d ./release/pwm.o
+                0x00000161       0x6d ./release/pwm.o
  .debug_pubnames
-                0x00000216       0xc1 ./release/timer1234.o
+                0x000001ce       0x54 ./release/i2c.o
  .debug_pubnames
-                0x000002d7       0x69 ./release/i2c.o
+                0x00000222       0xc0 ./release/timer234.o
  .debug_pubnames
-                0x00000340       0x80 ./release/motor.o
+                0x000002e2       0x69 ./release/main.o
  .debug_pubnames
-                0x000003c0       0x51 ./release/sensors.o
+                0x0000034b       0x80 ./release/motor.o
  .debug_pubnames
-                0x00000411       0x62 ./release/main.o
+                0x000003cb       0x3e ./release/sensors.o
 
 .debug_pubtypes
-                0x00000000      0x3ba
+                0x00000000      0x403
  .debug_pubtypes
                 0x00000000       0x5e ./release/adc.o
  .debug_pubtypes
                 0x0000005e       0x86 ./release/clock.o
  .debug_pubtypes
-                0x000000e4       0x5f ./release/gpio.o
+                0x000000e4       0x86 ./release/gpio.o
  .debug_pubtypes
-                0x00000143       0x56 ./release/pwm.o
+                0x0000016a       0x56 ./release/pwm.o
  .debug_pubtypes
-                0x00000199       0x79 ./release/timer1234.o
+                0x000001c0       0x84 ./release/i2c.o
  .debug_pubtypes
-                0x00000212       0x82 ./release/i2c.o
+                0x00000244       0x81 ./release/timer234.o
  .debug_pubtypes
-                0x00000294       0x6c ./release/motor.o
+                0x000002c5       0x77 ./release/main.o
  .debug_pubtypes
-                0x00000300       0x5b ./release/sensors.o
+                0x0000033c       0x6c ./release/motor.o
  .debug_pubtypes
-                0x0000035b       0x5f ./release/main.o
+                0x000003a8       0x5b ./release/sensors.o
 
 .debug_aranges  0x00000000      0x140
  .debug_aranges
@@ -400,37 +399,37 @@ OUTPUT(./release/Drone_0_0.elf elf32-littlearm)
  .debug_aranges
                 0x00000060       0x20 ./release/pwm.o
  .debug_aranges
-                0x00000080       0x20 ./release/timer1234.o
+                0x00000080       0x20 ./release/i2c.o
  .debug_aranges
-                0x000000a0       0x20 ./release/i2c.o
+                0x000000a0       0x20 ./release/timer234.o
  .debug_aranges
-                0x000000c0       0x20 ./release/motor.o
+                0x000000c0       0x20 ./release/main.o
  .debug_aranges
-                0x000000e0       0x20 ./release/sensors.o
+                0x000000e0       0x20 ./release/startup-gcc.o
  .debug_aranges
-                0x00000100       0x20 ./release/main.o
+                0x00000100       0x20 ./release/motor.o
  .debug_aranges
-                0x00000120       0x20 ./release/startup-gcc.o
+                0x00000120       0x20 ./release/sensors.o
 
-.debug_str      0x00000000      0x6ea
- .debug_str     0x00000000      0x180 ./release/adc.o
-                                0x1c9 (size before relaxing)
- .debug_str     0x00000180      0x1d4 ./release/clock.o
+.debug_str      0x00000000      0x722
+ .debug_str     0x00000000      0x185 ./release/adc.o
+                                0x1d3 (size before relaxing)
+ .debug_str     0x00000185      0x1d4 ./release/clock.o
                                 0x2fb (size before relaxing)
- .debug_str     0x00000354       0xe7 ./release/gpio.o
-                                0x20e (size before relaxing)
- .debug_str     0x0000043b       0x95 ./release/pwm.o
-                                0x295 (size before relaxing)
- .debug_str     0x000004d0       0xca ./release/timer1234.o
-                                0x342 (size before relaxing)
- .debug_str     0x0000059a       0xb0 ./release/i2c.o
-                                0x247 (size before relaxing)
- .debug_str     0x0000064a       0x49 ./release/motor.o
-                                0x2aa (size before relaxing)
- .debug_str     0x00000693       0x38 ./release/sensors.o
-                                0x1bb (size before relaxing)
- .debug_str     0x000006cb       0x1f ./release/main.o
-                                0x1b5 (size before relaxing)
+ .debug_str     0x00000359      0x114 ./release/gpio.o
+                                0x259 (size before relaxing)
+ .debug_str     0x0000046d       0x98 ./release/pwm.o
+                                0x298 (size before relaxing)
+ .debug_str     0x00000505       0x94 ./release/i2c.o
+                                0x27e (size before relaxing)
+ .debug_str     0x00000599       0xd1 ./release/timer234.o
+                                0x34e (size before relaxing)
+ .debug_str     0x0000066a       0x2f ./release/main.o
+                                0x222 (size before relaxing)
+ .debug_str     0x00000699       0x4a ./release/motor.o
+                                0x2fc (size before relaxing)
+ .debug_str     0x000006e3       0x3f ./release/sensors.o
+                                0x1ad (size before relaxing)
 
 .comment        0x00000000       0x2a
  .comment       0x00000000       0x2a ./release/adc.o
@@ -438,11 +437,11 @@ OUTPUT(./release/Drone_0_0.elf elf32-littlearm)
  .comment       0x00000000       0x2b ./release/clock.o
  .comment       0x00000000       0x2b ./release/gpio.o
  .comment       0x00000000       0x2b ./release/pwm.o
- .comment       0x00000000       0x2b ./release/timer1234.o
  .comment       0x00000000       0x2b ./release/i2c.o
+ .comment       0x00000000       0x2b ./release/timer234.o
+ .comment       0x00000000       0x2b ./release/main.o
  .comment       0x00000000       0x2b ./release/motor.o
  .comment       0x00000000       0x2b ./release/sensors.o
- .comment       0x00000000       0x2b ./release/main.o
 
 .ARM.attributes
                 0x00000000       0x2f
@@ -455,17 +454,17 @@ OUTPUT(./release/Drone_0_0.elf elf32-littlearm)
  .ARM.attributes
                 0x00000093       0x31 ./release/pwm.o
  .ARM.attributes
-                0x000000c4       0x31 ./release/timer1234.o
+                0x000000c4       0x31 ./release/i2c.o
  .ARM.attributes
-                0x000000f5       0x31 ./release/i2c.o
+                0x000000f5       0x31 ./release/timer234.o
  .ARM.attributes
-                0x00000126       0x31 ./release/motor.o
+                0x00000126       0x31 ./release/main.o
  .ARM.attributes
-                0x00000157       0x31 ./release/sensors.o
+                0x00000157       0x21 ./release/startup-gcc.o
  .ARM.attributes
-                0x00000188       0x31 ./release/main.o
+                0x00000178       0x31 ./release/motor.o
  .ARM.attributes
-                0x000001b9       0x21 ./release/startup-gcc.o
+                0x000001a9       0x31 ./release/sensors.o
  .ARM.attributes
                 0x000001da       0x1b c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
@@ -475,13 +474,13 @@ OUTPUT(./release/Drone_0_0.elf elf32-littlearm)
  .ARM.attributes
                 0x0000022b       0x1b c:/program files (x86)/codesourcery/sourcery g++ lite/bin/../lib/gcc/arm-none-eabi/4.5.2/thumb2\libgcc.a(_arm_fixunssfsi.o)
 
-.debug_frame    0x00000000      0x3a0
- .debug_frame   0x00000000       0x40 ./release/adc.o
- .debug_frame   0x00000040       0x70 ./release/clock.o
- .debug_frame   0x000000b0       0xd8 ./release/gpio.o
- .debug_frame   0x00000188       0x44 ./release/pwm.o
- .debug_frame   0x000001cc       0x98 ./release/timer1234.o
- .debug_frame   0x00000264       0x6c ./release/i2c.o
+.debug_frame    0x00000000      0x370
+ .debug_frame   0x00000000       0x38 ./release/adc.o
+ .debug_frame   0x00000038       0x70 ./release/clock.o
+ .debug_frame   0x000000a8       0x98 ./release/gpio.o
+ .debug_frame   0x00000140       0x44 ./release/pwm.o
+ .debug_frame   0x00000184       0x6c ./release/i2c.o
+ .debug_frame   0x000001f0       0x98 ./release/timer234.o
+ .debug_frame   0x00000288       0x48 ./release/main.o
  .debug_frame   0x000002d0       0x60 ./release/motor.o
  .debug_frame   0x00000330       0x40 ./release/sensors.o
- .debug_frame   0x00000370       0x30 ./release/main.o

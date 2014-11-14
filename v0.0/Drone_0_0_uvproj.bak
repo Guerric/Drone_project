@@ -278,7 +278,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers</IncludePath>
+              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers\services</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -341,11 +341,6 @@
               <FileType>1</FileType>
               <FilePath>.\drivers\i2c\i2c.c</FilePath>
             </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\drivers\motor.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -365,6 +360,21 @@
               <FileName>startup-gcc.S</FileName>
               <FileType>2</FileType>
               <FilePath>..\stm32lib\stm32f10x\boot\stm32f103\startup-gcc.S</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>services</GroupName>
+          <Files>
+            <File>
+              <FileName>motor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\services\motor.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensors.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\services\sensors.c</FilePath>
             </File>
           </Files>
         </Group>

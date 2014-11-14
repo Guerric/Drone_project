@@ -1,0 +1,77 @@
+\hypertarget{adc_8h}{\section{drivers/adc/adc.h File Reference}
+\label{adc_8h}\index{drivers/adc/adc.\+h@{drivers/adc/adc.\+h}}
+}
+
+
+S\+T\+M32\+F1xx A\+D\+C Driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f10x.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{adc_8h_a8ba5311409483483f69f6aaf207ed0ab}{A\+D\+C\+\_\+\+Init\+\_\+\+Clock} (A\+D\+C\+\_\+\+Type\+Def $\ast$A\+D\+C)
+\begin{DoxyCompactList}\small\item\em Function activating the clock of the given A\+D\+C. \end{DoxyCompactList}\item 
+float \hyperlink{adc_8h_aeb8af21244361267b3c33cdbc81178dd}{Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv} (A\+D\+C\+\_\+\+Type\+Def $\ast$A\+D\+C, u8 channel, u8 n\+\_\+cycles)
+\begin{DoxyCompactList}\small\item\em //\+Do a single conversion A\+D\+C on one channel \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+T\+M32\+F1xx A\+D\+C Driver. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/11/2014 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Guerric P\+A\+N\+I\+S
+\end{DoxyAuthor}
+Copyright (c) 2014, All rights reserved. 
+
+\subsection{Function Documentation}
+\hypertarget{adc_8h_a8ba5311409483483f69f6aaf207ed0ab}{\index{adc.\+h@{adc.\+h}!A\+D\+C\+\_\+\+Init\+\_\+\+Clock@{A\+D\+C\+\_\+\+Init\+\_\+\+Clock}}
+\index{A\+D\+C\+\_\+\+Init\+\_\+\+Clock@{A\+D\+C\+\_\+\+Init\+\_\+\+Clock}!adc.\+h@{adc.\+h}}
+\subsubsection[{A\+D\+C\+\_\+\+Init\+\_\+\+Clock}]{\setlength{\rightskip}{0pt plus 5cm}char A\+D\+C\+\_\+\+Init\+\_\+\+Clock (
+\begin{DoxyParamCaption}
+\item[{A\+D\+C\+\_\+\+Type\+Def $\ast$}]{A\+D\+C}
+\end{DoxyParamCaption}
+)}}\label{adc_8h_a8ba5311409483483f69f6aaf207ed0ab}
+
+
+Function activating the clock of the given A\+D\+C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+D\+C\+\_\+\+Type\+Def} & (A\+D\+C1, A\+D\+C2, ...) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if done correctly, 0 if not 
+\end{DoxyReturn}
+\hypertarget{adc_8h_aeb8af21244361267b3c33cdbc81178dd}{\index{adc.\+h@{adc.\+h}!Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv@{Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv}}
+\index{Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv@{Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv}!adc.\+h@{adc.\+h}}
+\subsubsection[{Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv}]{\setlength{\rightskip}{0pt plus 5cm}float Init\+\_\+\+A\+D\+C\+\_\+\+Single\+\_\+\+Conv (
+\begin{DoxyParamCaption}
+\item[{A\+D\+C\+\_\+\+Type\+Def $\ast$}]{A\+D\+C, }
+\item[{u8}]{channel, }
+\item[{u8}]{n\+\_\+cycles}
+\end{DoxyParamCaption}
+)}}\label{adc_8h_aeb8af21244361267b3c33cdbc81178dd}
+
+
+//\+Do a single conversion A\+D\+C on one channel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A\+D\+C\+\_\+\+Type\+Def} & =$>$ A\+D\+C1, A\+D\+C2, ... \\
+\hline
+{\em u8} & Channel =$>$ corresponding channel \\
+\hline
+{\em u8} & n\+\_\+cycles =$>$ n\+\_\+cycles of conversion (see clock registers for adc clock and cycle time) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float =$>$ single conversion result 
+\end{DoxyReturn}
