@@ -6,4 +6,4 @@ release/sensors.o: drivers/services/sensors.c drivers/services/sensors.h \
  C:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include/core_cmInstr.h \
  C:/Keil_v5/ARM/PACK/ARM/CMSIS/4.1.1/CMSIS/Include/core_cmFunc.h \
  ../stm32lib/stm32f10x/boot/system_stm32f10x.h drivers/i2c/i2c.h \
- drivers/gpio/gpio.h
+ drivers/gpio/gpio.h drivers/clock/clock.h

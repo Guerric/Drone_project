@@ -21,6 +21,10 @@
 #include "i2c.h"
 #include "motor.h"
 #include "sensors.h"
+#include <stdio.h>
+
+
+
 
 /*Global variables definition*/
 u32 clock;
@@ -33,15 +37,12 @@ float abs_float(float a){
 	return a;
 }
 
+
 int main (void)
 {	
 	/*Variables definitions*/
-	
-	float result, old_result=0;
 	u8 i;
-	
-	/*Stabilisation variables*/
-	u8 x_translation;
+	float result, old_result=0;
 	
 	/* Clock initialisations */
 	CLOCK_Configure();
@@ -62,24 +63,29 @@ int main (void)
 	for (i=1;i<=5;i++){	
 		setup_motor(i);
 	}
-	
 	init_sensors_bus();
 	
 	
+	init_MPU6050();
+	Port_IO_Init_Output (GPIOB, 8, PUSHPULL, OUT_2MHZ);
+	
+	/* Init timer for data sensors actualisation */
+	Timer_Init_Clock (SENSORS_TIMER);
+	Timer_Active_IT (SENSORS_TIMER, SENSORS_IRQ_PRIORITY, update_stabilization_variables);
+	Timer_234_Init(SENSORS_TIMER, GYRO_XY_UPDATE_PERIOD);
+	
+	
+	
 	while (1){	
-
 		result=Init_ADC_Single_Conv (ADC1, 1, 4);
-		
 		if ((abs_float(result-old_result))>5.0){
 			old_result=result;
 			set_motor_speed (1,result*100/4096);
 			set_motor_speed (2,result*100/4096);
 			set_motor_speed (3,result*100/4096);
 			set_motor_speed (4,result*100/4096);
-		}		
-		
-		//sensor acquisition
-		read_x_translation(& x_translation);		
+		}	
+	
 	}	
 	return 0;
 }

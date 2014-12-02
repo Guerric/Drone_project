@@ -4,7 +4,7 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\Guerricp\Desktop\Drone_project\v0.0\Drone_0_0.uvproj
-Project File Date:  11/12/2014
+Project File Date:  11/21/2014
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
@@ -18,39 +18,20 @@ compiling main.c...
 assembling startup-gcc.S...
 compiling motor.c...
 compiling sensors.c...
+drivers/services/sensors.c: In function 'update_stabilization_variables':
+drivers/services/sensors.c(48): warning: unused variable 'y_angular_h'
+drivers/services/sensors.c(48): warning: unused variable 'y_angular_l'
+drivers/services/sensors.c(62): warning: 'x_angular_h' is used uninitialized in this function
+drivers/services/sensors.c(62): warning: 'x_angular_l' is used uninitialized in this function
 linking...
-".\release\Drone_0_0.elf" - 0 Error(s), 0 Warning(s).
+".\release\Drone_0_0.elf" - 0 Error(s), 4 Warning(s).
+Load "C:\\Users\\Guerricp\\Desktop\\Drone_project\\v0.0\\release\\Drone_0_0.elf" 
+Erase Done.
+Programming Done.
+Verify OK.
 </pre>
 </body>
 </html>
-startup-gcc.S...
-compiling motor.c...
-compiling sensors.c...
-".\release\Drone_0_0.elf" - 2 Error(s), 0 Warning(s).
-Target not created
-le pointer type
-drivers/i2c/i2c.c(14): error: note: expected 'struct ADC_TypeDef *' but argument is of type 'struct I2C_TypeDef *'
-compiling timer234.c...
-compiling main.c...
-assembling startup-gcc.S...
-compiling motor.c...
-compiling sensors.c...
-".\release\Drone_0_0.elf" - 1 Error(s), 3 Warning(s).
-Target not created
-
-\Users\Guerricp\Desktop\Drone_project\v0.0/drivers/i2c/i2c.c:25: undefined reference to `Port_IO_Init_AFOD_Output'
-collect2: ld returned 1 exit status
-".\release\Drone_0_0.elf" - 1 Error(s), 1 Warning(s).
-Target not created
-tput'
-./release/main.o: In function `main':
-C:\Users\Guerricp\Desktop\Drone_project\v0.0/sources/main.c:52: undefined reference to `Port_IO_Init_ADC'
-collect2: ld returned 1 exit status
-".\release\Drone_0_0.elf" - 1 Error(s), 2 Warning(s).
-Target not created
- undefined reference to `Port_IO_Init_ADC'
-./release/motor.o: In function `configure_motor':
-C:\Users\Guerricp\Desktop\Drone_project\v0.0/drivers/services/motor.c:11: undefined reference to `Port_IO_Init_AF_Output'
-collect2: ld returned 1 exit status
-".\release\Drone_0_0.elf" - 1 Error(s), 3 Warning(s).
+services/sensors.c(57): warning: 'x_angular_h' is used uninitialized in this function
+".\release\Drone_0_0.elf" - 1 Error(s), 5 Warning(s).
 Target not created

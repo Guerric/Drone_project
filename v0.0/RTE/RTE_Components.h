@@ -10,6 +10,5 @@
 #ifndef RTE_COMPONENTS_H
 #define RTE_COMPONENTS_H
 
-#define RTE_Drivers_USBH0               /* Driver USBH0 */
 
 #endif /* RTE_COMPONENTS_H */

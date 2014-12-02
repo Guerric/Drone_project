@@ -278,7 +278,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers\services</IncludePath>
+              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers\services;.\drivers\lcd;..\stm32lib\stm32f10x\peripherals\inc</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -332,14 +332,14 @@
               <FilePath>.\drivers\pwm\pwm.c</FilePath>
             </File>
             <File>
-              <FileName>timer1234.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\drivers\timer\timer1234.c</FilePath>
-            </File>
-            <File>
               <FileName>i2c.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\drivers\i2c\i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer234.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\timer\timer234.c</FilePath>
             </File>
           </Files>
         </Group>

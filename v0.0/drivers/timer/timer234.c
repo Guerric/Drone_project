@@ -76,10 +76,10 @@ void Timer_Active_IT (TIM_TypeDef *Timer, u8 Priority, void (*IT_function) (void
 	}else if (Timer==TIM3){		
 			NVIC->ISER[0] |= 0b1<<29;
 			NVIC->IP[29] = Priority<<4;
-			Function_TIM4=IT_function;
+			Function_TIM3=IT_function;
 	}else if (Timer==TIM4){		
 			NVIC->ISER[0] |= 0b1<<30;
 			NVIC->IP[30] = Priority<<4;
-			Function_TIM3=IT_function;
+			Function_TIM4=IT_function;
 	}
 }

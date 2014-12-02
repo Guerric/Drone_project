@@ -1,6 +1,16 @@
+/** 
+* \file motor.c
+* \brief Motors services for drone project
+* \version 0.1
+* \date 29/11/2014
+* \author Guerric PANIS
+*
+* Copyright (c) 2014, All rights reserved.
+*
+*/
+
 #include "motor.h"
 
-/*Configure output pin and timer for a motor*/
 
 void configure_motor(GPIO_TypeDef* Port, u8 Pin, TIM_TypeDef * Timer, u8 Channel){
 	//init clocks
@@ -15,7 +25,6 @@ void configure_motor(GPIO_TypeDef* Port, u8 Pin, TIM_TypeDef * Timer, u8 Channel
 }
 
 
-/*Setting up a channel for a motor*/
 
 u8 setup_motor (u8 motor){
 	u8 flag=1;
@@ -44,7 +53,13 @@ u8 setup_motor (u8 motor){
 }
 
 
-/*Change the speed of a motor (0 to 100)*/
+void setup_all_motors (void){
+	configure_motor(MOTOR_1_PORT, MOTOR_1_PIN, MOTOR_1_TIMER, MOTOR_1_CHANNEL);
+	configure_motor(MOTOR_2_PORT, MOTOR_2_PIN, MOTOR_2_TIMER, MOTOR_2_CHANNEL);			
+	configure_motor(MOTOR_3_PORT, MOTOR_3_PIN, MOTOR_3_TIMER, MOTOR_3_CHANNEL);
+	configure_motor(MOTOR_4_PORT, MOTOR_4_PIN, MOTOR_4_TIMER, MOTOR_4_CHANNEL);
+}
+
 
 u8 set_motor_speed (u8 motor, float speed){
 	u8 flag=1;
