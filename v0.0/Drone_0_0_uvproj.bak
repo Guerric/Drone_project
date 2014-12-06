@@ -278,7 +278,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers\services;.\drivers\lcd;..\stm32lib\stm32f10x\peripherals\inc</IncludePath>
+              <IncludePath>..\stm32lib\stm32f10x\boot;.\drivers\adc;.\drivers\clock;.\drivers\gpio;.\drivers\pwm;.\drivers\timer;.\sources;.\drivers\i2c;.\drivers\services;.\drivers\lcd;..\stm32lib\stm32f10x\peripherals\inc;.\drivers\uart</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -375,6 +375,11 @@
               <FileName>sensors.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\drivers\services\sensors.c</FilePath>
+            </File>
+            <File>
+              <FileName>functions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\services\functions.c</FilePath>
             </File>
           </Files>
         </Group>

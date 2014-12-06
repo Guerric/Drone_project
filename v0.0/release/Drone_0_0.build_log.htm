@@ -4,7 +4,7 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\Guerricp\Desktop\Drone_project\v0.0\Drone_0_0.uvproj
-Project File Date:  11/21/2014
+Project File Date:  12/06/2014
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
@@ -18,20 +18,39 @@ compiling main.c...
 assembling startup-gcc.S...
 compiling motor.c...
 compiling sensors.c...
-drivers/services/sensors.c: In function 'update_stabilization_variables':
-drivers/services/sensors.c(48): warning: unused variable 'y_angular_h'
-drivers/services/sensors.c(48): warning: unused variable 'y_angular_l'
-drivers/services/sensors.c(62): warning: 'x_angular_h' is used uninitialized in this function
-drivers/services/sensors.c(62): warning: 'x_angular_l' is used uninitialized in this function
+drivers/services/sensors.c: In function 'compensate_altitude':
+drivers/services/sensors.c(105): warning: suggest parentheses around '+' inside '>>'
+drivers/services/sensors.c(106): warning: suggest parentheses around '+' inside '>>'
+compiling functions.c...
+compiling stabilization.c...
 linking...
-".\release\Drone_0_0.elf" - 0 Error(s), 4 Warning(s).
+".\release\Drone_0_0.elf" - 0 Error(s), 2 Warning(s).
+</pre>
+</body>
+</html>
+\Desktop\\Drone_project\\v0.0\\release\\Drone_0_0.elf" 
+Erase Done.
+Programming Done.
+Verify OK.
 Load "C:\\Users\\Guerricp\\Desktop\\Drone_project\\v0.0\\release\\Drone_0_0.elf" 
 Erase Done.
 Programming Done.
 Verify OK.
-</pre>
-</body>
-</html>
-services/sensors.c(57): warning: 'x_angular_h' is used uninitialized in this function
-".\release\Drone_0_0.elf" - 1 Error(s), 5 Warning(s).
+e Done.
+Programming Done.
+Verify OK.
+ot created
+ction it appears in
+drivers/services/stabilization.c(44): error: invalid type argument of unary '*' (have 'float')
+".\release\Drone_0_0.elf" - 4 Error(s), 2 Warning(s).
+Target not created
+es/stabilization.c(16): error: 'y_angular' undeclared (first use in this function)
+drivers/services/stabilization.c(22): error: 'motor_1_speed' undeclared (first use in this function)
+drivers/services/stabilization.c(28): error: 'motor_4_speed' undeclared (first use in this function)
+".\release\Drone_0_0.elf" - 5 Error(s), 4 Warning(s).
+Target not created
+ undeclared (first use in this function)
+drivers/services/stabilization.c(22): error: 'motor_1_speed' undeclared (first use in this function)
+drivers/services/stabilization.c(28): error: 'motor_4_speed' undeclared (first use in this function)
+".\release\Drone_0_0.elf" - 10 Error(s), 3 Warning(s).
 Target not created

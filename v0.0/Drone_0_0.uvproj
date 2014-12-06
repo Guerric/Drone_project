@@ -376,6 +376,16 @@
               <FileType>1</FileType>
               <FilePath>.\drivers\services\sensors.c</FilePath>
             </File>
+            <File>
+              <FileName>functions.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\services\functions.c</FilePath>
+            </File>
+            <File>
+              <FileName>stabilization.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\drivers\services\stabilization.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

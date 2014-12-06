@@ -21,6 +21,7 @@
 
 /*Offset speed : limit before motor starts*/
 #define OFFSET_SPEED 50
+#define MAX_SPEED 25.0
 
 /*Channel selection for each motor*/
 //do not forget t do the remaping manually if necessary
@@ -44,6 +45,11 @@
 #define MOTOR_4_PIN	3
 #define MOTOR_4_TIMER TIM2
 #define MOTOR_4_CHANNEL 4
+
+/*Speed motors variables*/
+float motor_1_speed, motor_2_speed, motor_3_speed, motor_4_speed;
+
+
 
 /** 
 * \brief Function initalizing a pwm port for motor command
@@ -75,5 +81,7 @@ void setup_all_motors (void);
 * \return 1 if done correctly, 0 if not
 */
 u8 set_motor_speed (u8 motor, float speed); 
+
+void update_all_motors_speed(void);
 
 #endif

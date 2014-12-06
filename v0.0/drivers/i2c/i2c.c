@@ -218,26 +218,27 @@ char I2C_Read (I2C_TypeDef * I2C, ACK_Type Ack, u8 *Byte) {
   uint32_t timeout = TIMEOUT_VALUE;
 	
 	// Check if the Bus is Idle first
-  while ((I2C_I2C_IsIdle(I2C)==1) && (-- timeout != 0));
+ // while ((I2C_I2C_IsIdle(I2C)==1) && (-- timeout != 0));
 
   if (Ack == ACK) {
     // Send ACK After receiving the next Byte
     I2C->CR1 |= I2C_CR1_POS;
     // Set Acknowledgement
     I2C->CR1 |= I2C_CR1_ACK;
-  } else {
+  } else if (Ack==NACK) {
     // Send NACK while receiving the next Byte
     I2C->CR1 &= ~I2C_CR1_POS;
     // Reset Acknowledgement
     I2C->CR1 &= ~I2C_CR1_ACK;
   }
   // Wait for the data register empty
-  while ((!(I2C->SR1 & I2C_SR1_RXNE)) && (-- timeout != 0));
-  if (timeout == 0)
+  while (((I2C->SR1 & I2C_SR1_RXNE)==0) && (-- timeout != 0));
+  if (timeout == 0){
     retval = -1;
-  else
+  }else{
     *Byte = I2C->DR;
-
+		while((I2C->SR1 & I2C_SR1_RXNE)>0);
+	}
   return retval;
 }
 
@@ -285,4 +286,62 @@ char single_read_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 register_addr, u8 * t
 	i=I2C_Read (I2C, NACK, trame_received);
 	}
 	return i;
+}
+
+char send_command_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 command){
+	char i;
+	i=I2C_Start (I2C);
+	if (i==0){
+	i=I2C_Write_Address(I2C,(slave_addr<<1));
+	}
+	if (i==0){
+	i=I2C_Write (I2C, command);
+	}
+	if (i==0){
+	i=I2C_Stop (I2C);
+	}
+	return i;
+}
+
+char several_read_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 register_addr, u8 nb_trame, u8 ** table_received){
+	char i;
+	u8 j=0;
+	u8 trame;
+	u8 table[nb_trame];
+
+	i=send_command_i2c (I2C,slave_addr, register_addr);
+	
+	i=I2C_Start (I2C);
+	
+	if (i==0){
+	i=I2C_Write_Address(I2C,(slave_addr<<1)+1);
+	}
+	
+	while (nb_trame>1){
+
+    I2C->CR1 |= I2C_CR1_ACK;
+		
+		// Wait for the data register empty
+		while ((I2C->SR1 & I2C_SR1_RXNE)==0);
+    trame = I2C->DR;
+		while((I2C->SR1 & I2C_SR1_RXNE)>0);
+		
+		table[j]=trame;
+		nb_trame--;
+		j++;
+	}
+	
+	if (i==0){
+		i=I2C_Read (I2C, NACK, & trame);
+	}
+		
+	if (i==0){
+	i=I2C_Stop (I2C);
+	}
+	
+	table[j]=trame;
+
+	*table_received=table;
+	
+	return i;	
 }

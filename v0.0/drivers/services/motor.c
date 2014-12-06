@@ -86,3 +86,24 @@ u8 set_motor_speed (u8 motor, float speed){
 	}
 	return flag;
 }
+
+
+
+void update_all_motors_speed(void){
+	if (motor_1_speed>MAX_SPEED){
+		motor_1_speed=MAX_SPEED;
+	}
+	if (motor_2_speed>MAX_SPEED){
+		motor_2_speed=MAX_SPEED;
+	}
+	if (motor_3_speed>MAX_SPEED){
+		motor_3_speed=MAX_SPEED;
+	}
+	if (motor_4_speed>MAX_SPEED){
+		motor_4_speed=MAX_SPEED;
+	}
+	set_motor_speed (1,motor_1_speed);
+	set_motor_speed (2,motor_2_speed);
+	set_motor_speed (3,motor_3_speed);
+	set_motor_speed (4,motor_4_speed);
+}

@@ -21,13 +21,13 @@
 #include "i2c.h"
 #include "motor.h"
 #include "sensors.h"
+#include "stabilization.h"
 #include <stdio.h>
 
 
 
 
 /*Global variables definition*/
-u32 clock;
 
 
 float abs_float(float a){
@@ -41,50 +41,41 @@ float abs_float(float a){
 int main (void)
 {	
 	/*Variables definitions*/
-	u8 i;
 	float result, old_result=0;
+	
+	
 	
 	/* Clock initialisations */
 	CLOCK_Configure();
-	
-	/*ADC initialization*/
 	ADC_Init_Clock (ADC1);
+	
 
 	//activation clocks AFIO 
-	(RCC->APB2ENR)|= RCC_APB2ENR_AFIOEN;
+	//(RCC->APB2ENR)|= RCC_APB2ENR_AFIOEN;
 	
 	
-	/********* Test driver ADC *************/
-	clock=CLOCK_GetPCLK1();
-	
-	//Configure PA1 in analog input
-	Port_IO_Init_Input (GPIOA, 1, ANALOG);
 
-	for (i=1;i<=5;i++){	
-		setup_motor(i);
-	}
-	init_sensors_bus();
+	//Configure PA1 in analog input
+	Port_IO_Init_Input (GPIOA, 1, ANALOG);	
 	
+	init_sensors();
+	setup_all_motors();
+	init_stabilization();
 	
-	init_MPU6050();
-	Port_IO_Init_Output (GPIOB, 8, PUSHPULL, OUT_2MHZ);
-	
-	/* Init timer for data sensors actualisation */
-	Timer_Init_Clock (SENSORS_TIMER);
-	Timer_Active_IT (SENSORS_TIMER, SENSORS_IRQ_PRIORITY, update_stabilization_variables);
-	Timer_234_Init(SENSORS_TIMER, GYRO_XY_UPDATE_PERIOD);
-	
-	
+
 	
 	while (1){	
+		/*Update motor speed*/
 		result=Init_ADC_Single_Conv (ADC1, 1, 4);
 		if ((abs_float(result-old_result))>5.0){
 			old_result=result;
-			set_motor_speed (1,result*100/4096);
-			set_motor_speed (2,result*100/4096);
-			set_motor_speed (3,result*100/4096);
-			set_motor_speed (4,result*100/4096);
-		}	
+
+			delta_altitude=result*100.0/4096.0;
+			
+		}
+			
+		/*Update angle*/
+		
 	
 	}	
 	return 0;

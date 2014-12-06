@@ -40,6 +40,14 @@ typedef enum {
 void init_i2c_master (I2C_TypeDef * I2C, unsigned int frequency);
 
 
+
+char I2C_Start (I2C_TypeDef * I2C);
+char I2C_Repeated_Start (I2C_TypeDef * I2C);
+char I2C_Stop (I2C_TypeDef * I2C);
+char I2C_Write (I2C_TypeDef * I2C, u8 Byte);
+char I2C_Write_Address(I2C_TypeDef * I2C, u8 Address);
+char I2C_Read (I2C_TypeDef * I2C, ACK_Type Ack, u8 *Byte);
+
 /** 
 * \brief Function changing a peripheral register value
 * \param I2C_TypeDef (I2C1, I2C2, ...) => the I2C used by the peripheral
@@ -56,9 +64,29 @@ char single_write_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 register_addr, u8 da
 * \param I2C_TypeDef (I2C1, I2C2, ...) => the I2C used by the peripheral
 * \param u8 slave_addr => peripheral address on 7 bits
 * \param u8 register_addr => the address of the peripheral register
-*	\param u8 trame_received => the value of the peipheral register
+*	\param u8 trame_received => the value of the peipheral register returned at this addres
 * \return 1 if done correctly, 0 if not
 */
 char single_read_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 register_addr, u8 * trame_received);
+
+/** 
+* \brief Function sending a 8 bit command to an I2C peripheral
+* \param I2C_TypeDef (I2C1, I2C2, ...) => the I2C used by the peripheral
+* \param u8 slave_addr => peripheral address on 7 bits
+* \param u8 command => the command to send
+* \return 1 if done correctly, 0 if not
+*/
+char send_command_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 command);
+
+/** 
+* \brief Function reading several byte on a I2C bus
+* \param I2C_TypeDef (I2C1, I2C2, ...) => the I2C used by the peripheral
+* \param u8 slave_addr => peripheral address on 7 bits
+* \param u8 register_addr => the address of the peripheral register
+* \param u8 nb_trame => the number of byte to receive from slave (must be >1, if not use the single read function)
+*	\param u8 trame_received => the value of the peipheral register returned at this address (address of the table)
+* \return 1 if done correctly, 0 if not
+*/
+char several_read_i2c (I2C_TypeDef * I2C, u8 slave_addr, u8 register_addr, u8 nb_trame, u8 ** table_received);
 
 #endif
